@@ -1,0 +1,641 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MedVantage | Marketing compliance reviews for UK aesthetics clinics</title>
+<meta name="description" content="A free, person-checked review of your clinic's website and Instagram against UK advertising rules. Plain-English findings and a clear next step.">
+<meta name="theme-color" content="#F2EDE0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23371011'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23F2EDE0'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  /* ------------------------------------------------------------------
+     Tokens. Cream + ink, with claret from the logo as the only colour.
+     Serif: display headlines + lead statements (sentence case).
+     Sans: everything else, with bold for sub-heads and emphasis.
+     ------------------------------------------------------------------ */
+  :root {
+    color-scheme: light;
+    --cream: #F2EDE0;
+    --paper: #FAF7F0;
+    --ink: #1A1A1A;
+    --ink-2: #4F4844;
+    --ink-3: #6B625C;
+    --rule: #1A1A1A;
+    --rule-soft: #D5CBB9;
+    --claret: #371011;
+    --oxblood: #6E2A33;
+    --rose: #D2A3A1;
+    --on-claret: #F2EDE0;
+    --on-claret-2: #D2C3B9;
+
+    --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --wrap: 1200px;
+    --gutter: clamp(20px, 4vw, 40px);
+    --ease: cubic-bezier(.2, .7, .2, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; background: var(--cream); color: var(--ink);
+    font-family: var(--sans); font-size: 16px; line-height: 1.6;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  img, svg { display: block; }
+  a { color: inherit; }
+  p { margin: 0; }
+  h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--oxblood); outline-offset: 3px; }
+  .claret :focus-visible { outline-color: var(--rose); }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+  .skip { position: absolute; left: 12px; top: -60px; background: var(--ink); color: var(--cream); padding: 10px 16px; z-index: 100; text-decoration: none; }
+  .skip:focus { top: 12px; }
+
+  /* Type roles */
+  .display { font-family: var(--serif); font-weight: 300; letter-spacing: -0.025em; font-variation-settings: "opsz" 72; }
+  .display em { font-style: italic; }
+  .lead { font-family: var(--serif); font-weight: 300; font-size: clamp(22px, 2.3vw, 28px); line-height: 1.3; letter-spacing: -0.005em; font-variation-settings: "opsz" 36; }
+  .lead em { font-style: italic; color: var(--oxblood); }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+
+  /* Pills */
+  .pill {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 40px; padding: 0 18px; border-radius: 999px;
+    border: 1px solid var(--ink); background: transparent; color: var(--ink);
+    font: 600 13px/1 var(--sans); letter-spacing: 0.01em;
+    text-decoration: none; cursor: pointer; white-space: nowrap;
+    transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+  }
+  .pill:hover { background: var(--ink); color: var(--cream); }
+  .pill.solid { background: var(--claret); border-color: var(--claret); color: var(--on-claret); }
+  .pill.solid:hover { background: var(--oxblood); border-color: var(--oxblood); }
+  .pill.lg { min-height: 52px; padding: 0 28px; font-size: 15px; }
+  .pill .arr { transition: transform .25s var(--ease); }
+  .pill:hover .arr { transform: translateX(3px); }
+  .pill:disabled { opacity: .55; cursor: progress; }
+
+  /* ------------------------------------------------------------------
+     Header
+     ------------------------------------------------------------------ */
+  .site-header .bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--rule); }
+  .site-header .left { justify-self: start; }
+  .site-header .right { justify-self: end; }
+  .logo { display: block; width: clamp(128px, 15vw, 188px); }
+  .logo img { width: 100%; height: auto; }
+  @media (max-width: 520px) {
+    .site-header .pill { min-height: 36px; padding: 0 12px; font-size: 12px; }
+    .logo { width: 112px; }
+  }
+
+  /* ------------------------------------------------------------------
+     Hero
+     ------------------------------------------------------------------ */
+  .hero { text-align: center; padding-block: clamp(72px, 10vw, 128px) clamp(64px, 8vw, 104px); display: grid; justify-items: center; }
+  .hero .eyebrow { color: var(--oxblood); margin-bottom: clamp(20px, 2.4vw, 28px); }
+  .hero h1 { font-size: clamp(44px, 7.6vw, 100px); line-height: 1; max-width: 10.5em; }
+  .hero h1 em { color: var(--oxblood); }
+  .hero .intro { margin-top: 20px; max-width: 34em; color: var(--ink-2); font-size: 17px; }
+  .hero .intro strong { color: var(--ink); font-weight: 600; }
+  .hero .actions { margin-top: 36px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+  .seal { margin-top: clamp(48px, 6vw, 72px); width: 112px; height: 112px; color: var(--ink); }
+  .seal text { font-family: var(--sans); font-size: 7.4px; font-weight: 600; letter-spacing: 0; text-transform: uppercase; fill: currentColor; }
+  .seal .mark { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 20px; fill: var(--oxblood); text-transform: none; }
+  @media (prefers-reduced-motion: no-preference) {
+    .seal .ring { transform-origin: 50px 50px; animation: spin 40s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  }
+
+  /* ------------------------------------------------------------------
+     Numbered sections: circled number, full rule, two equal columns
+     ------------------------------------------------------------------ */
+  .sec { padding-block: clamp(40px, 5vw, 64px) clamp(56px, 7vw, 96px); }
+  .num { display: inline-grid; place-items: center; width: 24px; height: 24px; border: 1px solid var(--ink); border-radius: 50%; font-size: 11px; font-weight: 600; line-height: 1; margin-bottom: 10px; }
+  .sec-rule { border-top: 1px solid var(--rule); padding-top: clamp(20px, 2.4vw, 28px); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px clamp(32px, 5vw, 64px); }
+  .sec .eyebrow { display: block; color: var(--oxblood); margin-bottom: 14px; }
+  .sec h2 { font-size: clamp(42px, 5.4vw, 68px); line-height: 1; }
+  .sec h2 em { color: var(--oxblood); }
+  .body > * + * { margin-top: 24px; }
+  .body .note { color: var(--ink-2); font-size: 16px; max-width: 36em; }
+  .body .note strong { color: var(--ink); font-weight: 600; }
+  @media (max-width: 820px) { .sec-rule { grid-template-columns: 1fr; } }
+
+  /* Rows: bold sans title | description (What we do) */
+  .rows { margin-top: clamp(36px, 4.4vw, 52px) !important; border-top: 1px solid var(--rule-soft); }
+  .rows > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 32px; padding-block: 18px; border-bottom: 1px solid var(--rule-soft); align-items: baseline; }
+  .rows h3 { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; display: flex; gap: 12px; align-items: baseline; }
+  .rows h3 .n { font-size: 12px; font-weight: 500; color: var(--oxblood); font-variant-numeric: tabular-nums; }
+  .rows p { color: var(--ink-2); font-size: 15px; }
+  @media (max-width: 520px) { .rows > div { grid-template-columns: 1fr; } }
+
+  /* 2 × 2 index (Snapshot, How it works) */
+  .index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 32px; margin-top: clamp(36px, 4.4vw, 52px) !important; list-style: none; padding: 0; }
+  .index h3 { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .index p { color: var(--ink-2); font-size: 15px; }
+  .index .step-n { font-family: var(--serif); font-weight: 300; font-size: 44px; line-height: 1; color: var(--oxblood); margin-bottom: 14px; font-variant-numeric: lining-nums; }
+  @media (max-width: 520px) { .index { grid-template-columns: 1fr; gap: 28px; } }
+
+  /* Pricing rows */
+  .offers { margin-top: clamp(36px, 4.4vw, 52px) !important; border-top: 1px solid var(--rule-soft); }
+  .offer { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 32px; padding-block: 28px; border-bottom: 1px solid var(--rule-soft); }
+  .offer .name { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.1; letter-spacing: -0.015em; }
+  .offer .price { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.1; text-align: right; font-variant-numeric: lining-nums tabular-nums; }
+  .offer .price s { font-size: 20px; color: var(--ink-3); text-decoration-thickness: 1px; margin-right: 10px; }
+  .offer .price small { display: block; margin-top: 6px; font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: var(--ink-3); }
+  .offer p { color: var(--ink-2); font-size: 15px; }
+  .offer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 14.5px; color: var(--ink-2); }
+  .offer li { padding-left: 16px; position: relative; }
+  .offer li::before { content: ""; position: absolute; left: 0; top: .72em; width: 8px; height: 1px; background: var(--oxblood); }
+  .offer .tag { display: inline-block; margin-top: 10px; font-size: 12px; font-weight: 600; color: var(--on-claret); background: var(--oxblood); border-radius: 999px; padding: 4px 11px; }
+  .fine { color: var(--ink-3); font-size: 14px; }
+  @media (max-width: 520px) { .offer { grid-template-columns: 1fr; } .offer .price { text-align: left; } }
+
+  .offer .eyebrow { display: block; color: var(--oxblood); margin-bottom: 8px; }
+  .rows p strong { color: var(--ink); font-weight: 600; }
+  .body .cta { padding-top: 8px; }
+  .ph { color: var(--oxblood); font-weight: 600; }
+
+  /* Sticky CTA on mobile */
+  .sticky-cta { display: none; }
+  @media (max-width: 760px) {
+    .sticky-cta { display: flex; position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom)); z-index: 60; transition: transform .35s var(--ease), opacity .35s ease; }
+    .sticky-cta .pill { width: 100%; box-shadow: 0 16px 32px -16px rgba(26,26,26,.55); }
+    .sticky-cta.off { transform: translateY(140%); opacity: 0; pointer-events: none; }
+    footer { padding-bottom: 104px; }
+  }
+
+  /* Request */
+  .ticks { list-style: none; padding: 0; display: grid; gap: 10px; font-size: 15px; color: var(--ink-2); }
+  .ticks li { display: flex; gap: 12px; align-items: baseline; }
+  .ticks li::before { content: ""; flex: none; width: 8px; height: 1px; background: var(--oxblood); transform: translateY(-4px); }
+  .ticks strong { color: var(--ink); font-weight: 600; }
+
+  form, .thanks { background: var(--paper); border: 1px solid var(--rule-soft); padding: clamp(24px, 3.4vw, 40px); }
+  form { display: grid; gap: 18px; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 560px) { .row { grid-template-columns: 1fr; } }
+  .field { display: grid; gap: 6px; }
+  .field label { font-size: 14px; font-weight: 600; color: var(--ink); }
+  .field .opt { color: var(--ink-3); font-weight: 400; }
+  input[type=text], input[type=email], select {
+    font: inherit; font-size: 16px; color: var(--ink); min-height: 48px; width: 100%;
+    background: #fff; border: 1px solid var(--rule-soft); border-radius: 0; padding: 12px 14px;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  input::placeholder { color: #9A908A; }
+  select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234F4844' stroke-width='1.75' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-size: 18px; padding-right: 42px; }
+  input:hover, select:hover { border-color: #BDB09C; }
+  input:focus, select:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(26,26,26,.08); }
+  input[aria-invalid="true"], select[aria-invalid="true"] { border-color: #A3303F; }
+  .check { display: grid; grid-template-columns: 20px 1fr; gap: 12px; font-size: 14px; color: var(--ink-2); align-items: start; }
+  .check label { cursor: pointer; }
+  .check input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--claret); cursor: pointer; }
+  .linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
+  .err { color: #A3303F; font-size: 14px; font-weight: 600; }
+  form .pill { width: 100%; }
+  .form-note { text-align: center; font-size: 13px; color: var(--ink-3); }
+  .thanks { display: grid; gap: 12px; justify-items: center; text-align: center; padding-block: 56px; }
+  .thanks h3 { font-family: var(--serif); font-weight: 300; font-size: 40px; letter-spacing: -0.02em; }
+  .thanks h3 em { color: var(--oxblood); }
+  .thanks p { color: var(--ink-2); max-width: 380px; }
+
+  /* ------------------------------------------------------------------
+     Footer
+     ------------------------------------------------------------------ */
+  footer { background: var(--claret); color: var(--on-claret); padding-block: clamp(56px, 7vw, 88px) 32px; text-align: center; }
+  footer .big { display: block; width: min(100%, 720px); margin-inline: auto; }
+  footer .big img { width: 100%; height: auto; }
+  footer .line { margin-top: 22px; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; font-size: 14px; font-weight: 600; color: var(--on-claret-2); }
+  footer .line span + span::before { content: "·"; margin-right: 14px; font-weight: 400; }
+  .foot-row { margin-top: clamp(40px, 5vw, 64px); padding-top: 20px; border-top: 1px solid rgba(242,237,224,.2); display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: center; font-size: 14px; color: var(--on-claret-2); }
+  .foot-row .l { justify-self: start; }
+  .foot-row .r { justify-self: end; }
+  .foot-links { display: flex; gap: 22px; }
+  .foot-links a, .foot-links button { text-decoration: none; color: var(--on-claret); font: 600 14px/1.6 var(--sans); background: none; border: 0; padding: 0; cursor: pointer; }
+  .foot-links a:hover, .foot-links button:hover { text-decoration: underline; text-underline-offset: 4px; }
+  @media (max-width: 760px) {
+    .foot-row { grid-template-columns: 1fr; justify-items: center; }
+    .foot-row .l, .foot-row .r { justify-self: center; }
+    .foot-links { flex-wrap: wrap; justify-content: center; }
+  }
+
+  /* ------------------------------------------------------------------
+     Terms dialog
+     ------------------------------------------------------------------ */
+  dialog.terms { width: min(640px, calc(100% - 32px)); max-height: min(80dvh, 720px); padding: 0; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 40px 80px -30px rgba(26,26,26,.5); }
+  dialog.terms::backdrop { background: rgba(26, 12, 13, .45); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+  .terms .inner { padding: clamp(24px, 4vw, 44px); display: grid; gap: 20px; }
+  .terms .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  .terms h2 { font-family: var(--serif); font-weight: 300; font-size: 34px; letter-spacing: -0.02em; line-height: 1.1; }
+  .terms h2 em { color: var(--oxblood); }
+  .terms h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+  .terms p { color: var(--ink-2); font-size: 15px; }
+  .terms .close { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ink); background: none; cursor: pointer; display: grid; place-items: center; font-size: 16px; line-height: 1; color: var(--ink); transition: background-color .2s, color .2s; flex: none; }
+  .terms .close:hover { background: var(--ink); color: var(--cream); }
+  @media (prefers-reduced-motion: no-preference) {
+    dialog.terms[open] { animation: pop .35s var(--ease); }
+    @keyframes pop { from { opacity: 0; transform: translateY(12px) scale(.98); } }
+  }
+
+  /* ------------------------------------------------------------------
+     Custom cursor (fine pointers only, off under reduced motion)
+     ------------------------------------------------------------------ */
+  .cursor-dot, .cursor-ring { position: fixed; left: 0; top: 0; pointer-events: none; z-index: 1000; border-radius: 50%; opacity: 0; }
+  .cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--oxblood); transition: opacity .25s ease, background-color .3s ease; }
+  .cursor-dot i { display: block; width: 100%; height: 100%; border-radius: 50%; background: inherit; transition: transform .3s var(--ease); }
+  .cursor-ring { width: 40px; height: 40px; margin: -20px 0 0 -20px; }
+  .cursor-ring i { position: absolute; inset: 0; border-radius: 50%; border: 1px solid var(--oxblood); transition: transform .4s var(--ease), background-color .35s ease, border-color .3s ease; }
+  html.has-cursor.cursor-on .cursor-dot, html.has-cursor.cursor-on .cursor-ring { opacity: 1; }
+  html.has-cursor, html.has-cursor a, html.has-cursor button, html.has-cursor label, html.has-cursor input[type=checkbox] { cursor: none; }
+  html.cursor-hover .cursor-ring i { transform: scale(1.6); background: rgba(110, 42, 51, .08); }
+  html.cursor-hover .cursor-dot { opacity: 0; }
+  html.cursor-down .cursor-ring i { transform: scale(.8); }
+  html.cursor-hover.cursor-down .cursor-ring i { transform: scale(1.3); }
+  html.cursor-dark .cursor-dot { background: var(--cream); }
+  html.cursor-dark .cursor-ring i { border-color: var(--cream); }
+  html.cursor-dark.cursor-hover .cursor-ring i { background: rgba(242, 237, 224, .1); }
+  html.cursor-field .cursor-dot, html.cursor-field .cursor-ring { opacity: 0 !important; }
+
+  /* ------------------------------------------------------------------
+     Motion: gentle load + scroll reveal
+     ------------------------------------------------------------------ */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero > * { animation: rise 1s var(--ease) both; }
+    .hero > *:nth-child(2) { animation-delay: .1s; }
+    .hero > *:nth-child(3) { animation-delay: .18s; }
+    .hero > *:nth-child(4) { animation-delay: .26s; }
+    .hero > *:nth-child(5) { animation-delay: .34s; }
+    @keyframes rise { from { opacity: .001; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .js .reveal { opacity: .001; transform: translateY(16px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .js .reveal.in { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="pill left" href="#pricing">Pricing</a>
+      <a class="logo" href="#top"><img src="assets/wordmark-claret.png" width="2400" height="273" alt="MedVantage"></a>
+      <a class="pill right" href="#request">Get your free Snapshot</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <!-- HERO -->
+  <section class="wrap hero" id="top" aria-labelledby="hero-title">
+    <p class="eyebrow">For UK aesthetics clinics</p>
+    <h1 class="display" id="hero-title">Grow your clinic, <em>safely.</em></h1>
+    <p class="intro">MedVantage checks your marketing against the advertising rules, keeps an eye on the clinics around you, and tells you <strong>the one thing to do next.</strong> Start with a free Compliance Snapshot of your website and Instagram, checked by a person before it reaches you.</p>
+    <div class="actions">
+      <a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a>
+      <a class="pill lg" href="#snapshot">See what it covers</a>
+    </div>
+    <svg class="seal" viewBox="0 0 100 100" aria-hidden="true">
+      <defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+      <g class="ring"><text><textPath href="#circ" textLength="236" lengthAdjust="spacing">For UK aesthetics clinics · Grow your clinic, safely ·</textPath></text></g>
+      <text class="mark" x="50" y="57" text-anchor="middle">mv</text>
+    </svg>
+  </section>
+
+  <!-- 1 · THREE QUESTIONS -->
+  <section class="wrap sec" id="questions" aria-labelledby="q-title">
+    <span class="num" aria-hidden="true">1</span>
+    <div class="sec-rule reveal">
+      <h2 class="display" id="q-title">Three questions every clinic owner <em>asks.</em></h2>
+      <div class="body">
+        <p class="lead">Most clinic marketing agencies sell you more bookings. MedVantage answers the <em>questions underneath</em>: where you're exposed, where you're losing ground, and what to fix first.</p>
+        <div class="rows">
+          <div><h3><span class="n">01</span>Compliance</h3><p><strong>“Is my marketing compliant?”</strong> Your treatment pages, captions and offers, checked against the CAP Code and MHRA rules on prescription-only medicines, with anything that needs a closer look clearly flagged.</p></div>
+          <div><h3><span class="n">02</span>Competition</h3><p><strong>“Why is the clinic down the road winning?”</strong> What nearby clinics are changing: new treatments, pricing, review momentum and how they present themselves.</p></div>
+          <div><h3><span class="n">03</span>Priorities</h3><p><strong>“What should I do this month?”</strong> One clear priority, with the reasoning and evidence behind it. No dashboards to learn, no reports to decode.</p></div>
+        </div>
+        <p class="note"><em>The free Snapshot starts with the first question. The Signature Audit and MedVantage Watch answer all three.</em></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 · THE COMPLIANCE SNAPSHOT -->
+  <section class="wrap sec" id="snapshot" aria-labelledby="snap-title">
+    <span class="num" aria-hidden="true">2</span>
+    <div class="sec-rule reveal">
+      <div>
+        <p class="eyebrow">Free · Two pages, no padding</p>
+        <h2 class="display" id="snap-title">The Compliance <em>Snapshot</em></h2>
+      </div>
+      <div class="body">
+        <p class="lead">A short, specific review of your public marketing. It's built to be useful on its own, so you can act on it <em>whether or not we ever speak again.</em></p>
+        <div class="index">
+          <div><h3>Website and treatment pages</h3><p>How treatments are named, described and priced, and any claims likely to attract a complaint or the ASA's attention.</p></div>
+          <div><h3>Your last 30 Instagram posts</h3><p>Captions, hashtags, offers and imagery, including before-and-after content.</p></div>
+          <div><h3>Evidence for every point</h3><p>Each finding shows exactly where it appears, so your team can find and fix it quickly.</p></div>
+          <div><h3>A practical next step</h3><p>What to change first, in plain English rather than regulatory language.</p></div>
+        </div>
+        <p class="note"><strong>Why free?</strong> Because it's the fastest way to show you how we work. If it's useful, you'll know where to find us. If not, you've still got a clearer picture of your marketing.</p>
+        <div class="cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 · HOW IT WORKS -->
+  <section class="wrap sec" id="process" aria-labelledby="proc-title">
+    <span class="num" aria-hidden="true">3</span>
+    <div class="sec-rule reveal">
+      <h2 class="display" id="proc-title">How it <em>works</em></h2>
+      <div class="body">
+        <p class="lead">Nothing to install, no login. Software does the first read; <em>a person checks every finding</em> before it's sent.</p>
+        <ol class="index">
+          <li><p class="step-n">01</p><h3>Request</h3><p>Share your clinic name, website and Instagram handle. It takes about a minute.</p></li>
+          <li><p class="step-n">02</p><h3>Review</h3><p>We scan your public marketing, then check each finding by hand and discard anything that doesn't hold up.</p></li>
+          <li><p class="step-n">03</p><h3>Receive</h3><p>Your Snapshot arrives by email as a short PDF, usually within five working days.</p></li>
+          <li><p class="step-n">04</p><h3>Talk it through</h3><p>If it's useful, book a 20-minute walkthrough. Entirely optional, with no obligation to buy anything.</p></li>
+        </ol>
+        <div class="cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · ABOUT -->
+  <section class="wrap sec" id="about" aria-labelledby="about-title">
+    <span class="num" aria-hidden="true">4</span>
+    <div class="sec-rule reveal">
+      <div>
+        <p class="eyebrow">Why MedVantage</p>
+        <h2 class="display" id="about-title">Clinics are judged on <em>trust.</em> Their marketing should earn it.</h2>
+      </div>
+      <div class="body">
+        <p class="lead">MedVantage brings more than ten years' experience in marketing and communications, much of it in sectors where every claim is scrutinised. The job is always the same: help an organisation look as credible as it is, <em>without saying anything it can't stand behind.</em></p>
+        <p class="note">Aesthetics is professionalising fast, and the advertising rules are being enforced more closely than ever. <strong>The clinics that last will be the ones that look trustworthy, sound trustworthy and stay on the right side of the rules.</strong> MedVantage exists to help owners get there without guesswork.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · PRICING -->
+  <section class="wrap sec" id="pricing" aria-labelledby="price-title">
+    <span class="num" aria-hidden="true">5</span>
+    <div class="sec-rule reveal">
+      <h2 class="display" id="price-title">After the <em>Snapshot</em></h2>
+      <div class="body">
+        <p class="lead">For clinics that want the full picture, and for those that want <em>someone keeping watch</em> each month.</p>
+        <div class="offers">
+          <article class="offer">
+            <div><span class="eyebrow">Start here</span><h3 class="name">Compliance Snapshot</h3></div>
+            <div class="price">Free</div>
+            <p>Your public marketing, reviewed and prioritised.</p>
+            <ul><li>Website and treatment pages</li><li>Last 30 Instagram posts</li><li>Evidence and a next step</li></ul>
+          </article>
+          <article class="offer">
+            <div><span class="eyebrow">One-off</span><h3 class="name">Signature Audit</h3></div>
+            <div class="price">£495<small>Founding price</small></div>
+            <p>A full review of where your clinic is exposed, where it's missing opportunities, and what to prioritise.</p>
+            <ul><li>Brand, website and social content</li><li>Local competitors and reviews</li><li>Compliance and pricing signals</li><li>A 30/60/90-day action plan</li></ul>
+          </article>
+          <article class="offer">
+            <div><span class="eyebrow">Monthly</span><h3 class="name">MedVantage Watch</h3></div>
+            <div class="price">£195<small>/ month</small></div>
+            <p>One page a month: what you need to know, and what to do about it.</p>
+            <ul><li>Flags on your new content</li><li>Changes at three nearby clinics</li><li>Review trends</li><li>One priority action</li></ul>
+          </article>
+        </div>
+        <p class="fine">Founding prices apply to our first ten clinics. Watch has a three-month minimum.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · FAQ -->
+  <section class="wrap sec" id="faq" aria-labelledby="faq-title">
+    <span class="num" aria-hidden="true">6</span>
+    <div class="sec-rule reveal">
+      <h2 class="display" id="faq-title">Common <em>questions</em></h2>
+      <div class="body">
+        <div class="rows" style="margin-top:0 !important">
+          <div><h3>Is this legal advice?</h3><p>No. The Snapshot flags potential issues for qualified review. It doesn't determine whether your clinic is compliant.</p></div>
+          <div><h3>Who sees my results?</h3><p>Only you. We never publish or share findings about a clinic. <span class="ph">[confirm]</span></p></div>
+          <div><h3>Do I have to buy anything?</h3><p>No. The Snapshot is yours to keep and act on, whether or not we speak again.</p></div>
+          <div><h3>What happens to my details?</h3><p>We use them to prepare and send your Snapshot, and to follow up once. That's it. <span class="ph">[Privacy policy link]</span></p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 · REQUEST -->
+  <section class="wrap sec" id="request" aria-labelledby="req-title">
+    <span class="num" aria-hidden="true">7</span>
+    <div class="sec-rule reveal">
+      <div class="body">
+        <p class="eyebrow" style="color:var(--oxblood)">Free · No obligation</p>
+        <h2 class="display" id="req-title" style="margin-top:14px">Request your <em>Compliance Snapshot</em></h2>
+        <p class="lead">We're currently reviewing clinics in England and Wales, <em>in the order requests arrive.</em></p>
+      </div>
+
+      <div>
+        <form id="snapshot-form" novalidate>
+          <div class="row">
+            <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="f-role">Your role</label>
+              <select id="f-role" name="role" required>
+                <option value="">Select</option>
+                <option>Owner</option>
+                <option>Practitioner</option>
+                <option>Manager</option>
+              </select>
+            </div>
+            <div class="field"><label for="f-clinic">Clinic name</label><input id="f-clinic" name="clinic" type="text" autocomplete="organization" required></div>
+          </div>
+          <div class="row">
+            <div class="field"><label for="f-site">Website</label><input id="f-site" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourclinic.co.uk" required></div>
+            <div class="field"><label for="f-ig">Instagram <span class="opt">(optional)</span></label><input id="f-ig" name="instagram" type="text" placeholder="@yourclinic"></div>
+          </div>
+          <div class="field">
+            <label for="f-size">Practitioners</label>
+            <select id="f-size" name="practitioners" required>
+              <option value="">Select</option>
+              <option>Just me</option>
+              <option>2–4</option>
+              <option>5–8</option>
+              <option>9 or more</option>
+            </select>
+          </div>
+          <div class="check">
+            <input id="f-consent" name="consent" type="checkbox" required>
+            <span><label for="f-consent">I understand the Snapshot flags potential issues for qualified review and isn't legal advice.</label> <button class="linklike" type="button" data-open-terms>Read the terms</button></span>
+          </div>
+          <p class="err" id="f-error" role="alert" hidden></p>
+          <button class="pill solid lg" type="submit" id="f-submit">Request my Snapshot <span class="arr" aria-hidden="true">→</span></button>
+          <p class="form-note">Usually delivered within five working days.</p>
+        </form>
+
+        <div class="thanks" id="f-thanks" hidden tabindex="-1">
+          <p class="eyebrow" style="color:var(--oxblood)">Request received</p>
+          <h3>Thank <em>you.</em></h3>
+          <p>Your Snapshot will arrive from <span class="ph">[hello@medvantage.uk]</span>. It's worth adding us to your contacts so it doesn't land in spam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="claret">
+  <div class="wrap">
+    <a class="big" href="#top"><img src="assets/wordmark-cream.png" width="2400" height="273" alt="MedVantage" loading="lazy"></a>
+    <p class="line"><span>medvantage.uk</span><span>London</span><span>[hello@medvantage.uk]</span></p>
+    <div class="foot-row">
+      <span class="l">[If incorporated: company name, number and registered office]</span>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="#snapshot">The Snapshot</a>
+        <a href="#process">How it works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <button type="button" data-open-terms>Terms</button>
+      </nav>
+      <span class="r">© 2026 MedVantage</span>
+    </div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky-cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
+
+<!-- Terms & disclaimer -->
+<dialog class="terms" id="terms" aria-labelledby="terms-title">
+  <div class="inner">
+    <div class="top">
+      <h2 id="terms-title">Terms &amp; <em>disclaimer</em></h2>
+      <button class="close" type="button" data-close-terms aria-label="Close terms">✕</button>
+    </div>
+    <div>
+      <h3>About our findings</h3>
+      <p>MedVantage provides marketing and brand guidance for aesthetics businesses. Snapshot and audit findings identify potential issues for qualified review. They are not legal or regulatory advice and do not determine whether a business is compliant. Please seek qualified advice before acting on any compliance matter.</p>
+    </div>
+    <div>
+      <h3>Your details</h3>
+      <p>We only use the details you submit to prepare and send your Snapshot, and to follow up once about it.</p>
+    </div>
+    <div>
+      <h3>Founding prices</h3>
+      <p>Founding prices apply to our first ten clinics. MedVantage Watch has a three-month minimum.</p>
+    </div>
+  </div>
+</dialog>
+
+<div class="cursor-ring" aria-hidden="true"><i></i></div>
+<div class="cursor-dot" aria-hidden="true"><i></i></div>
+
+<script>
+  // Where form submissions go on the live site.
+  // Paste a Formspree / Tally / Basin endpoint here, e.g. "https://formspree.io/f/abcd1234".
+  // Left blank, the form validates and shows the thank-you state without sending anything.
+  const FORM_ENDPOINT = "";
+
+  const root = document.documentElement;
+  root.classList.add("js");
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // Scroll reveals
+  const io = "IntersectionObserver" in window && new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+  }, { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".reveal").forEach(el => io ? io.observe(el) : el.classList.add("in"));
+
+  // Terms dialog
+  const terms = document.getElementById("terms");
+  document.querySelectorAll("[data-open-terms]").forEach(b => b.addEventListener("click", () => terms.showModal()));
+  terms.querySelector("[data-close-terms]").addEventListener("click", () => terms.close());
+  terms.addEventListener("click", e => { if (e.target === terms) terms.close(); });
+
+  // Custom cursor: a dot that tracks exactly, and a ring that eases behind it
+  if (matchMedia("(pointer: fine)").matches && !reduceMotion) {
+    root.classList.add("has-cursor");
+    const dot = document.querySelector(".cursor-dot");
+    const ring = document.querySelector(".cursor-ring");
+    let x = -100, y = -100, rx = -100, ry = -100;
+    addEventListener("pointermove", e => {
+      x = e.clientX; y = e.clientY;
+      dot.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+      root.classList.add("cursor-on");
+      const t = e.target;
+      root.classList.toggle("cursor-hover", !!t.closest("a, button, label, select, input[type=checkbox]"));
+      root.classList.toggle("cursor-field", !!t.closest("input[type=text], input[type=email]"));
+      root.classList.toggle("cursor-dark", !!t.closest(".claret"));
+    }, { passive: true });
+    document.addEventListener("pointerleave", () => root.classList.remove("cursor-on"));
+    addEventListener("pointerdown", () => root.classList.add("cursor-down"));
+    addEventListener("pointerup", () => root.classList.remove("cursor-down"));
+    (function loop() {
+      rx += (x - rx) * 0.18; ry += (y - ry) * 0.18;
+      ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`;
+      requestAnimationFrame(loop);
+    })();
+  }
+
+  // Mobile sticky CTA: hidden while the hero buttons or the form are on screen
+  const sticky = document.getElementById("sticky-cta");
+  if ("IntersectionObserver" in window) {
+    const seen = new Set();
+    const so = new IntersectionObserver(entries => {
+      entries.forEach(e => e.isIntersecting ? seen.add(e.target) : seen.delete(e.target));
+      sticky.classList.toggle("off", seen.size > 0);
+    });
+    [document.querySelector(".hero .actions"), document.getElementById("request")].forEach(el => so.observe(el));
+  }
+
+  // Snapshot form
+  const form = document.getElementById("snapshot-form");
+  const errorEl = document.getElementById("f-error");
+  const thanks = document.getElementById("f-thanks");
+  const submit = document.getElementById("f-submit");
+  const submitLabel = submit.innerHTML;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errorEl.hidden = true;
+    const missing = [...form.querySelectorAll("[required]")].filter(el =>
+      el.type === "checkbox" ? !el.checked : !el.value.trim());
+    const email = form.querySelector("#f-email");
+    if (missing.length) {
+      const first = missing[0];
+      errorEl.textContent = first.type === "checkbox"
+        ? "Please tick the box to confirm you've read how the Snapshot works."
+        : "Please fill in the highlighted fields so we can prepare your Snapshot.";
+      missing.forEach(el => el.setAttribute("aria-invalid", "true"));
+      errorEl.hidden = false; first.focus(); return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+      email.setAttribute("aria-invalid", "true");
+      errorEl.textContent = "That email address looks incomplete. Please check it and try again.";
+      errorEl.hidden = false; email.focus(); return;
+    }
+    const data = Object.fromEntries(new FormData(form).entries());
+    if (FORM_ENDPOINT) {
+      submit.disabled = true; submit.textContent = "Sending…";
+      try {
+        const res = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) });
+        if (!res.ok) throw new Error();
+      } catch {
+        submit.disabled = false; submit.innerHTML = submitLabel;
+        errorEl.textContent = "Your request didn't send. Please try again in a moment.";
+        errorEl.hidden = false; return;
+      }
+    }
+    form.hidden = true; thanks.hidden = false; thanks.focus();
+  });
+  form.addEventListener("input", e => e.target.removeAttribute("aria-invalid"));
+  form.addEventListener("change", e => e.target.removeAttribute("aria-invalid"));
+</script>
+</body>
+</html>
