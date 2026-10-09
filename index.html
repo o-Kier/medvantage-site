@@ -9,7 +9,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23371011'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23F2EDE0'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
 <style>
   /* ------------------------------------------------------------------
      Tokens. Cream + ink, with claret from the logo as the only colour.
@@ -31,8 +31,8 @@
     --on-claret: #F2EDE0;
     --on-claret-2: #D2C3B9;
 
-    --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
-    --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+    --sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
 
     --wrap: 1200px;
     --gutter: clamp(20px, 4vw, 40px);
@@ -61,9 +61,9 @@
   .skip:focus { top: 12px; }
 
   /* Type roles */
-  .display { font-family: var(--serif); font-weight: 300; letter-spacing: -0.025em; font-variation-settings: "opsz" 72; }
+  .display { font-family: var(--serif); font-weight: 400; letter-spacing: -0.02em; }
   .display em { font-style: italic; }
-  .lead { font-family: var(--serif); font-weight: 300; font-size: clamp(22px, 2.3vw, 28px); line-height: 1.3; letter-spacing: -0.005em; font-variation-settings: "opsz" 36; }
+  .lead { font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 2.5vw, 30px); line-height: 1.28; letter-spacing: -0.005em; }
   .lead em { font-style: italic; color: var(--oxblood); }
   .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
 
@@ -109,7 +109,7 @@
   .hero .actions { margin-top: 36px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
   .seal { margin-top: clamp(48px, 6vw, 72px); width: 112px; height: 112px; color: var(--ink); }
   .seal text { font-family: var(--sans); font-size: 7.4px; font-weight: 600; letter-spacing: 0; text-transform: uppercase; fill: currentColor; }
-  .seal .mark { font-family: var(--serif); font-style: italic; font-weight: 300; font-size: 20px; fill: var(--oxblood); text-transform: none; }
+  .seal .mark { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 20px; fill: var(--oxblood); text-transform: none; }
   @media (prefers-reduced-motion: no-preference) {
     .seal .ring { transform-origin: 50px 50px; animation: spin 40s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
@@ -141,14 +141,14 @@
   .index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 32px; margin-top: clamp(36px, 4.4vw, 52px) !important; list-style: none; padding: 0; }
   .index h3 { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 8px; }
   .index p { color: var(--ink-2); font-size: 15px; }
-  .index .step-n { font-family: var(--serif); font-weight: 300; font-size: 44px; line-height: 1; color: var(--oxblood); margin-bottom: 14px; font-variant-numeric: lining-nums; }
+  .index .step-n { font-family: var(--serif); font-weight: 400; font-size: 44px; line-height: 1; color: var(--oxblood); margin-bottom: 14px; font-variant-numeric: lining-nums; }
   @media (max-width: 520px) { .index { grid-template-columns: 1fr; gap: 28px; } }
 
   /* Pricing rows */
   .offers { margin-top: clamp(36px, 4.4vw, 52px) !important; border-top: 1px solid var(--rule-soft); }
   .offer { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 32px; padding-block: 28px; border-bottom: 1px solid var(--rule-soft); }
-  .offer .name { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.1; letter-spacing: -0.015em; }
-  .offer .price { font-family: var(--serif); font-weight: 300; font-size: 30px; line-height: 1.1; text-align: right; font-variant-numeric: lining-nums tabular-nums; }
+  .offer .name { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.1; letter-spacing: -0.015em; }
+  .offer .price { font-family: var(--serif); font-weight: 400; font-size: 30px; line-height: 1.1; text-align: right; font-variant-numeric: lining-nums tabular-nums; }
   .offer .price s { font-size: 20px; color: var(--ink-3); text-decoration-thickness: 1px; margin-right: 10px; }
   .offer .price small { display: block; margin-top: 6px; font-family: var(--sans); font-size: 12.5px; font-weight: 500; color: var(--ink-3); }
   .offer p { color: var(--ink-2); font-size: 15px; }
@@ -201,10 +201,11 @@
   .check input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--claret); cursor: pointer; }
   .linklike { background: none; border: 0; padding: 0; font: inherit; color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
   .err { color: #A3303F; font-size: 14px; font-weight: 600; }
+  .err a { color: inherit; }
   form .pill { width: 100%; }
   .form-note { text-align: center; font-size: 13px; color: var(--ink-3); }
   .thanks { display: grid; gap: 12px; justify-items: center; text-align: center; padding-block: 56px; }
-  .thanks h3 { font-family: var(--serif); font-weight: 300; font-size: 40px; letter-spacing: -0.02em; }
+  .thanks h3 { font-family: var(--serif); font-weight: 400; font-size: 40px; letter-spacing: -0.02em; }
   .thanks h3 em { color: var(--oxblood); }
   .thanks p { color: var(--ink-2); max-width: 380px; }
 
@@ -231,14 +232,16 @@
   /* ------------------------------------------------------------------
      Terms dialog
      ------------------------------------------------------------------ */
-  dialog.terms { width: min(640px, calc(100% - 32px)); max-height: min(80dvh, 720px); padding: 0; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 40px 80px -30px rgba(26,26,26,.5); }
+  dialog.terms { width: min(640px, calc(100% - 32px)); max-height: min(80dvh, 720px); overflow: auto; padding: 0; border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 40px 80px -30px rgba(26,26,26,.5); }
   dialog.terms::backdrop { background: rgba(26, 12, 13, .45); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
   .terms .inner { padding: clamp(24px, 4vw, 44px); display: grid; gap: 20px; }
   .terms .top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
-  .terms h2 { font-family: var(--serif); font-weight: 300; font-size: 34px; letter-spacing: -0.02em; line-height: 1.1; }
+  .terms h2 { font-family: var(--serif); font-weight: 400; font-size: 34px; letter-spacing: -0.02em; line-height: 1.1; }
   .terms h2 em { color: var(--oxblood); }
   .terms h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
   .terms p { color: var(--ink-2); font-size: 15px; }
+  .terms p strong { color: var(--ink); font-weight: 600; }
+  .terms #privacy-notice { padding-top: 16px; border-top: 1px solid var(--rule-soft); outline: none; }
   .terms .close { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ink); background: none; cursor: pointer; display: grid; place-items: center; font-size: 16px; line-height: 1; color: var(--ink); transition: background-color .2s, color .2s; flex: none; }
   .terms .close:hover { background: var(--ink); color: var(--cream); }
   @media (prefers-reduced-motion: no-preference) {
@@ -360,7 +363,7 @@
           <li><p class="step-n">01</p><h3>Request</h3><p>Share your clinic name, website and Instagram handle. It takes about a minute.</p></li>
           <li><p class="step-n">02</p><h3>Review</h3><p>We scan your public marketing, then check each finding by hand and discard anything that doesn't hold up.</p></li>
           <li><p class="step-n">03</p><h3>Receive</h3><p>Your Snapshot arrives by email as a short PDF, usually within five working days.</p></li>
-          <li><p class="step-n">04</p><h3>Talk it through</h3><p>If it's useful, book a 20-minute walkthrough. Entirely optional, with no obligation to buy anything.</p></li>
+          <li><p class="step-n">04</p><h3>Talk it through</h3><p>If you'd like to go through it together, just ask for a 15-minute walkthrough. Entirely optional, with no obligation to buy anything.</p></li>
         </ol>
         <div class="cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
       </div>
@@ -398,7 +401,7 @@
           </article>
           <article class="offer">
             <div><span class="eyebrow">One-off</span><h3 class="name">Signature Audit</h3></div>
-            <div class="price">£495<small>Founding price</small></div>
+            <div class="price"><s aria-hidden="true">£1,500</s><span class="sr">Usually £1,500, founding price </span>£750<small>Founding price</small></div>
             <p>A full review of where your clinic is exposed, where it's missing opportunities, and what to prioritise.</p>
             <ul><li>Brand, website and social content</li><li>Local competitors and reviews</li><li>Compliance and pricing signals</li><li>A 30/60/90-day action plan</li></ul>
           </article>
@@ -409,7 +412,7 @@
             <ul><li>Flags on your new content</li><li>Changes at three nearby clinics</li><li>Review trends</li><li>One priority action</li></ul>
           </article>
         </div>
-        <p class="fine">Founding prices apply to our first ten clinics. Watch has a three-month minimum.</p>
+        <p class="fine">The Signature Audit founding price applies to our first ten clinics; the list price is £1,500 after that. Watch has a three-month minimum.</p>
       </div>
     </div>
   </section>
@@ -422,9 +425,9 @@
       <div class="body">
         <div class="rows" style="margin-top:0 !important">
           <div><h3>Is this legal advice?</h3><p>No. The Snapshot flags potential issues for qualified review. It doesn't determine whether your clinic is compliant.</p></div>
-          <div><h3>Who sees my results?</h3><p>Only you. We never publish or share findings about a clinic. <span class="ph">[confirm]</span></p></div>
+          <div><h3>Who sees my results?</h3><p>Only you. We never publish or share findings about a clinic.</p></div>
           <div><h3>Do I have to buy anything?</h3><p>No. The Snapshot is yours to keep and act on, whether or not we speak again.</p></div>
-          <div><h3>What happens to my details?</h3><p>We use them to prepare and send your Snapshot, and to follow up once. That's it. <span class="ph">[Privacy policy link]</span></p></div>
+          <div><h3>What happens to my details?</h3><p>We use them to prepare and send your Snapshot, and to follow up once. That's it. <button class="linklike" type="button" data-open-terms="privacy">Read our privacy notice</button></p></div>
         </div>
       </div>
     </div>
@@ -476,6 +479,7 @@
             <input id="f-consent" name="consent" type="checkbox" required>
             <span><label for="f-consent">I understand the Snapshot flags potential issues for qualified review and isn't legal advice.</label> <button class="linklike" type="button" data-open-terms>Read the terms</button></span>
           </div>
+          <div class="sr" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
           <p class="err" id="f-error" role="alert" hidden></p>
           <button class="pill solid lg" type="submit" id="f-submit">Request my Snapshot <span class="arr" aria-hidden="true">→</span></button>
           <p class="form-note">Usually delivered within five working days.</p>
@@ -484,7 +488,7 @@
         <div class="thanks" id="f-thanks" hidden tabindex="-1">
           <p class="eyebrow" style="color:var(--oxblood)">Request received</p>
           <h3>Thank <em>you.</em></h3>
-          <p>Your Snapshot will arrive from <span class="ph">[hello@medvantage.uk]</span>. It's worth adding us to your contacts so it doesn't land in spam.</p>
+          <p>Your Snapshot will arrive from <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a>. It's worth adding us to your contacts so it doesn't land in spam.</p>
         </div>
       </div>
     </div>
@@ -494,15 +498,16 @@
 <footer class="claret">
   <div class="wrap">
     <a class="big" href="#top"><img src="MV_Logo_Light.svg?v=3" width="272" height="31" alt="MedVantage" loading="lazy"></a>
-    <p class="line"><span>medvantage.uk</span><span>London</span><span>[hello@medvantage.uk]</span></p>
+    <p class="line"><span>medvantage.uk</span><span>London</span><span><a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a></span></p>
     <div class="foot-row">
-      <span class="l">[If incorporated: company name, number and registered office]</span>
+      <span class="l">Serving clinics in England and Wales</span>
       <nav class="foot-links" aria-label="Footer">
         <a href="#snapshot">The Snapshot</a>
         <a href="#process">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#about">About</a>
         <button type="button" data-open-terms>Terms</button>
+        <button type="button" data-open-terms="privacy">Privacy</button>
       </nav>
       <span class="r">© 2026 MedVantage</span>
     </div>
@@ -515,7 +520,7 @@
 <dialog class="terms" id="terms" aria-labelledby="terms-title">
   <div class="inner">
     <div class="top">
-      <h2 id="terms-title">Terms &amp; <em>disclaimer</em></h2>
+      <h2 id="terms-title">Terms &amp; <em>privacy</em></h2>
       <button class="close" type="button" data-close-terms aria-label="Close terms">✕</button>
     </div>
     <div>
@@ -523,12 +528,24 @@
       <p>MedVantage provides marketing and brand guidance for aesthetics businesses. Snapshot and audit findings identify potential issues for qualified review. They are not legal or regulatory advice and do not determine whether a business is compliant. Please seek qualified advice before acting on any compliance matter.</p>
     </div>
     <div>
-      <h3>Your details</h3>
-      <p>We only use the details you submit to prepare and send your Snapshot, and to follow up once about it.</p>
+      <h3>Founding prices</h3>
+      <p>The Signature Audit founding price of £750 applies to our first ten clinics; the list price is £1,500. MedVantage Watch is £195 a month with a three-month minimum.</p>
+    </div>
+    <div id="privacy-notice" tabindex="-1">
+      <h3>Privacy notice</h3>
+      <p><strong>What we collect.</strong> The details you enter in the Snapshot form: your name, email address, role, clinic name, website, Instagram handle and practice size. We review only your clinic's public marketing.</p>
     </div>
     <div>
-      <h3>Founding prices</h3>
-      <p>Founding prices apply to our first ten clinics. MedVantage Watch has a three-month minimum.</p>
+      <p><strong>Why we use it.</strong> To prepare and send the Snapshot you asked for, and to follow up once about it. We rely on our legitimate interest in responding to your request. We don't sell your details or add you to a mailing list.</p>
+    </div>
+    <div>
+      <p><strong>Who handles it.</strong> Form submissions are delivered to our inbox by a form-forwarding service (FormSubmit), and our email is hosted by our email provider. They process your details only to deliver and store our messages.</p>
+    </div>
+    <div>
+      <p><strong>How long we keep it.</strong> Up to 12 months after your request, unless you become a client. Ask us to delete it sooner at any time.</p>
+    </div>
+    <div>
+      <p><strong>Your rights.</strong> You can ask to see, correct or delete your details, or object to how we use them, by emailing <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a>. You can also complain to the Information Commissioner's Office at ico.org.uk.</p>
     </div>
   </div>
 </dialog>
@@ -537,10 +554,9 @@
 <div class="cursor-dot" aria-hidden="true"><i></i></div>
 
 <script>
-  // Where form submissions go on the live site.
-  // Paste a Formspree / Tally / Basin endpoint here, e.g. "https://formspree.io/f/abcd1234".
-  // Left blank, the form validates and shows the thank-you state without sending anything.
-  const FORM_ENDPOINT = "";
+  // Form submissions are emailed to hello@medvantage.uk via FormSubmit (formsubmit.co).
+  // The very first submission triggers an activation email to that inbox: click the link in it once.
+  const FORM_ENDPOINT = "https://formsubmit.co/ajax/hello@medvantage.uk";
 
   const root = document.documentElement;
   root.classList.add("js");
@@ -554,7 +570,13 @@
 
   // Terms dialog
   const terms = document.getElementById("terms");
-  document.querySelectorAll("[data-open-terms]").forEach(b => b.addEventListener("click", () => terms.showModal()));
+  document.querySelectorAll("[data-open-terms]").forEach(b => b.addEventListener("click", () => {
+    terms.showModal();
+    if (b.dataset.openTerms === "privacy") {
+      const pn = document.getElementById("privacy-notice");
+      pn.scrollIntoView({ block: "start" }); pn.focus({ preventScroll: true });
+    } else { terms.scrollTop = 0; }
+  }));
   terms.querySelector("[data-close-terms]").addEventListener("click", () => terms.close());
   terms.addEventListener("click", e => { if (e.target === terms) terms.close(); });
 
@@ -621,14 +643,22 @@
       errorEl.hidden = false; email.focus(); return;
     }
     const data = Object.fromEntries(new FormData(form).entries());
+    if (form.querySelector("#f-hp").value) { form.hidden = true; thanks.hidden = false; return; } // bot trap
+    delete data._honey;
+    data.consent = "Yes";
+    data._subject = `Snapshot request: ${data.clinic}`;
+    data._replyto = data.email;
+    data._template = "table";
+    data._captcha = "false";
     if (FORM_ENDPOINT) {
       submit.disabled = true; submit.textContent = "Sending…";
       try {
         const res = await fetch(FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(data) });
-        if (!res.ok) throw new Error();
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || out.success === "false" || out.success === false) throw new Error();
       } catch {
         submit.disabled = false; submit.innerHTML = submitLabel;
-        errorEl.textContent = "Your request didn't send. Please try again in a moment.";
+        errorEl.innerHTML = 'Your request didn\'t send. Please try again in a moment, or email us at <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a>.';
         errorEl.hidden = false; return;
       }
     }
