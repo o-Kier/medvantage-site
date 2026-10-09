@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy policy | MedVantage</title>
+<meta name="description" content="How MedVantage collects, uses and protects personal information, and the rights you have over it.">
+<meta name="theme-color" content="#F2EDE0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23371011'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23F2EDE0'%3EM%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+  :root {
+    color-scheme: light;
+    --cream: #F2EDE0;
+    --paper: #FAF7F0;
+    --ink: #1A1A1A;
+    --ink-2: #4F4844;
+    --ink-3: #6B625C;
+    --rule: #1A1A1A;
+    --rule-soft: #D5CBB9;
+    --claret: #371011;
+    --oxblood: #6E2A33;
+    --on-claret: #F2EDE0;
+    --on-claret-2: #D2C3B9;
+    --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+    --sans: "Schibsted Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --wrap: 1200px;
+    --gutter: clamp(20px, 4vw, 40px);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 24px; -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body { margin: 0; background: var(--cream); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  img { display: block; }
+  a { color: inherit; text-underline-offset: 3px; }
+  p, ul { margin: 0; }
+  h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
+  :focus-visible { outline: 2px solid var(--oxblood); outline-offset: 3px; }
+  .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+  .skip { position: absolute; left: 12px; top: -60px; background: var(--ink); color: var(--cream); padding: 10px 16px; z-index: 100; text-decoration: none; }
+  .skip:focus { top: 12px; }
+
+  .pill { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 40px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--ink); color: var(--ink); font: 600 13px/1 var(--sans); text-decoration: none; white-space: nowrap; transition: background-color .25s ease, color .25s ease; }
+  .pill:hover { background: var(--ink); color: var(--cream); }
+
+  .site-header .bar { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; padding-block: 18px; border-bottom: 1px solid var(--rule); }
+  .site-header .left { justify-self: start; }
+  .site-header .right { justify-self: end; }
+  .logo { display: block; width: clamp(128px, 15vw, 188px); }
+  .logo img { width: 100%; height: auto; }
+  @media (max-width: 520px) { .site-header .pill { min-height: 36px; padding: 0 12px; font-size: 12px; } .logo { width: 112px; } }
+
+  .page-head { padding-block: clamp(56px, 8vw, 104px) clamp(32px, 4vw, 48px); }
+  .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--oxblood); }
+  .page-head h1 { margin-top: 18px; font-family: var(--serif); font-size: clamp(48px, 7vw, 92px); line-height: 1; letter-spacing: -0.02em; }
+  .page-head h1 em { color: var(--oxblood); }
+  .page-head .meta { margin-top: 20px; color: var(--ink-3); font-size: 14px; }
+
+  .layout { display: grid; grid-template-columns: minmax(200px, 260px) minmax(0, 1fr); gap: clamp(32px, 6vw, 96px); border-top: 1px solid var(--rule); padding-block: clamp(28px, 3vw, 40px) clamp(72px, 9vw, 120px); }
+  @media (max-width: 860px) { .layout { grid-template-columns: 1fr; } .toc { position: static !important; } }
+  .toc { position: sticky; top: 24px; align-self: start; }
+  .toc p { font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin-bottom: 12px; }
+  .toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; counter-reset: toc; }
+  .toc li { counter-increment: toc; display: flex; gap: 10px; font-size: 14px; }
+  .toc li::before { content: counter(toc, decimal-leading-zero); color: var(--oxblood); font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; padding-top: 2px; }
+  .toc a { text-decoration: none; color: var(--ink-2); }
+  .toc a:hover { color: var(--ink); text-decoration: underline; }
+
+  .content { max-width: 720px; }
+  .summary { background: var(--paper); border: 1px solid var(--rule-soft); padding: clamp(22px, 3vw, 32px); margin-bottom: clamp(40px, 5vw, 56px); }
+  .summary h2 { font-family: var(--serif); font-size: 30px; line-height: 1.1; margin-bottom: 14px; }
+  .summary ul { display: grid; gap: 8px; padding: 0; list-style: none; color: var(--ink-2); }
+  .summary li { padding-left: 18px; position: relative; }
+  .summary li::before { content: ""; position: absolute; left: 0; top: .8em; width: 9px; height: 1px; background: var(--oxblood); }
+
+  section.part { padding-top: 8px; margin-bottom: clamp(40px, 5vw, 56px); }
+  section.part > h2 { font-family: var(--serif); font-size: clamp(32px, 3.6vw, 42px); line-height: 1.05; letter-spacing: -0.01em; padding-bottom: 14px; margin-bottom: 18px; border-bottom: 1px solid var(--rule-soft); }
+  section.part > h2 .n { font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--oxblood); margin-right: 12px; vertical-align: middle; font-variant-numeric: tabular-nums; }
+  .content h3 { font-size: 16px; font-weight: 700; margin: 24px 0 6px; }
+  .content p { color: var(--ink-2); }
+  .content p + p, .content p + ul, .content ul + p { margin-top: 12px; }
+  .content ul.list { padding-left: 18px; color: var(--ink-2); display: grid; gap: 6px; }
+  .content strong { color: var(--ink); font-weight: 600; }
+
+  .table-wrap { margin-top: 16px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; vertical-align: top; padding: 12px 14px 12px 0; border-bottom: 1px solid var(--rule-soft); color: var(--ink-2); }
+  th { font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); border-bottom-color: var(--ink); }
+  td:first-child { color: var(--ink); font-weight: 600; width: 30%; }
+  @media (max-width: 600px) {
+    table, thead, tbody, tr, th, td { display: block; }
+    thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+    tr { padding: 12px 0; border-bottom: 1px solid var(--rule-soft); }
+    td { border: 0; padding: 2px 0; width: auto !important; }
+    td[data-l]::before { content: attr(data-l) ": "; font-weight: 600; color: var(--ink-3); }
+  }
+
+  .contact-card { margin-top: 18px; padding: 20px 22px; border-left: 2px solid var(--oxblood); background: var(--paper); }
+  .contact-card p { margin: 0 !important; }
+
+  footer { background: var(--claret); color: var(--on-claret); padding-block: clamp(48px, 6vw, 72px) 32px; text-align: center; }
+  footer .big { display: block; width: min(100%, 560px); margin-inline: auto; }
+  footer .big img { width: 100%; height: auto; }
+  .social { margin-top: 24px; display: flex; justify-content: center; }
+  .social a { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(242,237,224,.45); color: var(--on-claret); transition: background-color .25s ease, color .25s ease, border-color .25s ease; }
+  .social a:hover { background: var(--on-claret); color: var(--claret); border-color: var(--on-claret); }
+  .foot-row { margin-top: clamp(32px, 4vw, 48px); padding-top: 20px; border-top: 1px solid rgba(242,237,224,.2); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 14px; color: var(--on-claret-2); }
+  .foot-row a { color: var(--on-claret); font-weight: 600; text-decoration: none; }
+  .foot-row a:hover { text-decoration: underline; }
+  @media (max-width: 600px) { .foot-row { justify-content: center; text-align: center; } }
+  :is(footer) :focus-visible { outline-color: #D2A3A1; }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <div class="bar">
+      <a class="pill left" href="index.html">← Home</a>
+      <a class="logo" href="index.html"><img src="MV_Logo_Dark.svg?v=3" width="272" height="31" alt="MedVantage"></a>
+      <a class="pill right" href="index.html#request">Free Snapshot</a>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div class="page-head">
+    <p class="eyebrow">Privacy policy</p>
+    <h1>How we look after <em>your information</em></h1>
+    <p class="meta">Last updated 9 October 2026</p>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="On this page">
+      <p>On this page</p>
+      <ol>
+        <li><a href="#who">Who we are</a></li>
+        <li><a href="#what">What we collect and why</a></li>
+        <li><a href="#public">Clinics' public marketing</a></li>
+        <li><a href="#emails">Emails to clinics</a></li>
+        <li><a href="#sharing">Who we share it with</a></li>
+        <li><a href="#transfers">Outside the UK</a></li>
+        <li><a href="#retention">How long we keep it</a></li>
+        <li><a href="#website">This website and cookies</a></li>
+        <li><a href="#security">Keeping it safe</a></li>
+        <li><a href="#rights">Your rights</a></li>
+        <li><a href="#complaints">Complaints</a></li>
+        <li><a href="#changes">Changes</a></li>
+      </ol>
+    </nav>
+
+    <div class="content">
+      <div class="summary">
+        <h2>The short version</h2>
+        <ul>
+          <li>We collect only what we need to prepare Snapshots, work with clients and run a small business.</li>
+          <li>We never sell your details, and we never share a clinic's findings with anyone else.</li>
+          <li>Every marketing email we send lets you opt out, and once you do, we won't contact you again.</li>
+          <li>We review only what clinics have chosen to publish, and we keep evidence no longer than we need it.</li>
+          <li>You can ask to see, correct or delete your information at any time by emailing <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a>.</li>
+        </ul>
+      </div>
+
+      <section class="part" id="who">
+        <h2><span class="n">01</span>Who we are</h2>
+        <p>MedVantage is the trading name of Kieran Hymers, a sole trader based in London, England. In this policy, "MedVantage", "we" and "us" mean that business.</p>
+        <p>We are the "controller" of the personal information described here, which means we decide how and why it is used, and we are responsible for looking after it under UK data protection law (the UK GDPR and the Data Protection Act 2018) and the Privacy and Electronic Communications Regulations (PECR).</p>
+        <div class="contact-card">
+          <p><strong>Questions about your information?</strong> Email <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a> and we'll reply as soon as we can.</p>
+        </div>
+      </section>
+
+      <section class="part" id="what">
+        <h2><span class="n">02</span>What we collect and why</h2>
+        <p>Most of what we handle is business information about clinics. Some of it is about people, and this table sets out whose information it is, what we hold, where it comes from, why we use it and the lawful basis we rely on.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Whose information</th><th scope="col">What and where from</th><th scope="col">Why, and lawful basis</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>People who request a Snapshot</td>
+                <td data-l="What">Name, email, role, clinic name, website, Instagram handle and practice size, from our website form or your email to us. Anything you tell us about your clinic in later messages.</td>
+                <td data-l="Why">To prepare and send the Snapshot you asked for and follow up once about it. <strong>Legitimate interests</strong>: responding to your request.</td>
+              </tr>
+              <tr>
+                <td>Clinic owners and managers we contact</td>
+                <td data-l="What">Name, job title, business email, clinic name and type of business, plus a short note of what we observed in the clinic's public marketing and how you replied. Collected from your clinic's website, Instagram bio, Google Business Profile, LinkedIn and Companies House.</td>
+                <td data-l="Why">To introduce our services to clinics that may find them useful, and to keep a record of who has opted out. <strong>Legitimate interests</strong>: promoting our business to relevant businesses, balanced against your interests as set out in section 04.</td>
+              </tr>
+              <tr>
+                <td>Clients</td>
+                <td data-l="What">Contact details, the work we do together, correspondence, and billing and payment records.</td>
+                <td data-l="Why">To deliver the services you've bought. <strong>Contract</strong>. Keeping financial records. <strong>Legal obligation</strong>.</td>
+              </tr>
+              <tr>
+                <td>People who appear in clinics' public marketing</td>
+                <td data-l="What">Practitioners' names, photos and professional details, reviewers' names and comments, and people shown in published images. All taken from what the clinic or the platform has made public.</td>
+                <td data-l="Why">To review a clinic's marketing and monitor local competitors for our clients. <strong>Legitimate interests</strong>: see section 03.</td>
+              </tr>
+              <tr>
+                <td>Website visitors</td>
+                <td data-l="What">Technical information your browser sends, such as IP address, browser type and the pages you request.</td>
+                <td data-l="Why">To deliver, secure and understand use of this website. <strong>Legitimate interests</strong>: see section 08.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Software and people</h3>
+        <p>We use software, including AI tools, to help with a first read of public marketing and to draft our reports. A person checks every finding before anything reaches you. We don't make decisions about anyone based solely on automated processing.</p>
+      </section>
+
+      <section class="part" id="public">
+        <h2><span class="n">03</span>Clinics' public marketing</h2>
+        <p>Our Snapshots, audits and monthly Watch reports look at what clinics have chosen to publish: websites, social media posts, review profiles and similar. Those pages often include information about people, such as practitioners, reviewers and, in before-and-after images, patients.</p>
+        <p>We don't set out to collect information about individuals here. We look at this material only to comment on the clinic's marketing. To show a clinic exactly where a point appears, we may keep a screenshot or link as evidence. Where a screenshot includes an identifiable patient, we limit or obscure that part where we can, we never use it for any other purpose, and we delete it in line with section 07.</p>
+        <p>If you appear in a clinic's marketing and want to know whether we hold anything about you, or want it removed, email <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a>.</p>
+      </section>
+
+      <section class="part" id="emails">
+        <h2><span class="n">04</span>Emails to clinics</h2>
+        <p>We contact some clinics we haven't spoken to before, to offer a free Snapshot. We keep this careful and limited:</p>
+        <ul class="list">
+          <li>We send unsolicited emails only to limited companies and LLPs, and only to people whose role makes our services relevant to them, such as owners and managers.</li>
+          <li>We don't send unsolicited marketing emails to sole traders or partnerships. We contact them only if they've asked us to, or through someone they already know.</li>
+          <li>Every email says who we are and gives you a simple way to opt out. Just reply and say so.</li>
+          <li>We send each email individually. We don't use tracking pixels or track whether you open our emails.</li>
+          <li>If you opt out, we keep a brief record (your name, email and clinic) on a do-not-contact list so that we never contact you again.</li>
+        </ul>
+      </section>
+
+      <section class="part" id="sharing">
+        <h2><span class="n">05</span>Who we share it with</h2>
+        <p>We don't sell personal information, and we never publish or share a clinic's findings with anyone other than that clinic.</p>
+        <p>We use trusted service providers who handle information on our behalf and only on our instructions:</p>
+        <ul class="list">
+          <li><strong>Google</strong>: email, document storage and spreadsheets (Google Workspace), and website fonts</li>
+          <li><strong>FormSubmit</strong>: delivers website form submissions to our inbox</li>
+          <li><strong>GitHub</strong>: hosts this website</li>
+          <li><strong>Cloudflare</strong>: website security, performance and visitor statistics</li>
+          <li><strong>Notion</strong>: planning and working notes</li>
+          <li><strong>Anthropic</strong>: AI tools that help analyse public marketing and draft reports</li>
+          <li>Our bank, any payment provider we use, and our accountant, for client billing and records</li>
+        </ul>
+        <p>We may also share information with professional advisers such as lawyers or insurers, or with authorities where the law requires it.</p>
+      </section>
+
+      <section class="part" id="transfers">
+        <h2><span class="n">06</span>Information outside the UK</h2>
+        <p>Some of our service providers are based outside the UK, including in the United States, so your information may be processed there. When it is, we rely on protections recognised under UK law, such as the UK–US data bridge or the ICO's international data transfer agreement or addendum, so that your information keeps an equivalent level of protection.</p>
+      </section>
+
+      <section class="part" id="retention">
+        <h2><span class="n">07</span>How long we keep it</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Information</th><th scope="col">How long</th></tr></thead>
+            <tbody>
+              <tr><td>Snapshot requests and Snapshots</td><td data-l="How long">Up to 12 months after we send your Snapshot, unless you become a client.</td></tr>
+              <tr><td>Clinic contacts who don't reply</td><td data-l="How long">Up to 12 months after our last contact.</td></tr>
+              <tr><td>Do-not-contact list</td><td data-l="How long">For as long as we contact clinics, so we can keep honouring your request.</td></tr>
+              <tr><td>Client records</td><td data-l="How long">For as long as you're a client, then as long as tax and accounting law requires, usually six years.</td></tr>
+              <tr><td>Evidence screenshots</td><td data-l="How long">Deleted with the report they support.</td></tr>
+              <tr><td>Website logs</td><td data-l="How long">Kept by our providers for their standard periods, which are short.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="part" id="website">
+        <h2><span class="n">08</span>This website and cookies</h2>
+        <p>This website doesn't use advertising or tracking cookies. Our hosting and security providers (GitHub and Cloudflare) receive technical information when you visit, as any website does, and Cloudflare may set a small, strictly necessary cookie to help tell people apart from automated traffic.</p>
+        <p>We count visits with Cloudflare Web Analytics, which doesn't use cookies or build a profile of you. The fonts on this site are loaded from Google, which means Google receives your IP address when the page loads.</p>
+      </section>
+
+      <section class="part" id="security">
+        <h2><span class="n">09</span>Keeping it safe</h2>
+        <p>We keep personal information in a small number of secure, password-protected business accounts with two-step sign-in, and we limit what we collect in the first place. No system is perfectly secure, but if something did go wrong we would act quickly and tell you and the ICO where the law requires.</p>
+      </section>
+
+      <section class="part" id="rights">
+        <h2><span class="n">10</span>Your rights</h2>
+        <p>You have the right to:</p>
+        <ul class="list">
+          <li>ask for a copy of the personal information we hold about you</li>
+          <li>ask us to correct anything that's inaccurate or incomplete</li>
+          <li>ask us to delete your information</li>
+          <li>ask us to restrict how we use it</li>
+          <li>object to our using it on the basis of legitimate interests, and to stop marketing at any time; if you object to marketing, we'll always stop</li>
+          <li>ask for information you gave us in a portable format, where that applies</li>
+        </ul>
+        <p>To use any of these rights, email <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a>. It's free, and we'll respond within one month. We may need to confirm who you are first.</p>
+      </section>
+
+      <section class="part" id="complaints">
+        <h2><span class="n">11</span>Complaints</h2>
+        <p>If you're unhappy with how we've handled your information, please tell us first at <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a> so we can try to put it right.</p>
+        <p>You can also complain to the Information Commissioner's Office, the UK's data protection regulator, at <a href="https://ico.org.uk/make-a-complaint/">ico.org.uk/make-a-complaint</a> or on 0303 123 1113.</p>
+      </section>
+
+      <section class="part" id="changes">
+        <h2><span class="n">12</span>Changes to this policy</h2>
+        <p>We'll update this policy when the way we work changes, including if MedVantage becomes a limited company. The date at the top shows when it was last updated.</p>
+      </section>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="big" href="index.html"><img src="MV_Logo_Light.svg?v=3" width="272" height="31" alt="MedVantage" loading="lazy"></a>
+    <div class="social"><a href="https://www.instagram.com/_medvantage/" target="_blank" rel="noopener" aria-label="MedVantage on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a></div>
+    <div class="foot-row">
+      <span>© 2026 MedVantage · <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a></span>
+      <span><a href="index.html">Home</a> · <a href="privacy.html">Privacy</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
