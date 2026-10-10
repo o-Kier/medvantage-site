@@ -126,7 +126,22 @@
   }
   @media (max-width: 520px) { .hero .eyebrow { font-size: 14px; } }
 
-  /* Finding cards (hero example and sample Snapshot page) */
+  /* Hero example: as posted / consider instead */
+  .rewrite { background: var(--paper); border: 1px solid var(--rule-soft); box-shadow: 0 30px 60px -36px rgba(55, 16, 17, .4); }
+  .rw-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px 12px; padding: 20px clamp(22px, 3vw, 36px); border-bottom: 1px solid var(--rule-soft); }
+  .rw-head .ex { font-size: 12px; color: var(--oxblood); }
+  .rw-block { padding: clamp(22px, 2.6vw, 28px) clamp(22px, 3vw, 36px); }
+  .rw-block .label { display: block; margin-bottom: 10px; }
+  .rw-block.after { background: var(--cream); border-block: 1px solid var(--rule-soft); }
+  .rw-block.after .label { color: var(--oxblood); }
+  .rw-quote { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 30px); line-height: 1.25; letter-spacing: -.005em; }
+  .rw-block.before .rw-quote { color: var(--ink-3); text-decoration: line-through; text-decoration-color: var(--oxblood); text-decoration-thickness: 1.5px; }
+  .rw-why { padding: 22px clamp(22px, 3vw, 36px) 26px; }
+  .rw-why p { font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+  .rw-why strong { color: var(--ink); font-weight: 600; }
+  .rw-why .src { margin-top: 12px; font-size: 12px; line-height: 1.6; color: var(--ink-3); }
+
+  /* Finding cards (sample Snapshot page) */
   .finding { background: var(--paper); border: 1px solid var(--rule-soft); padding: clamp(24px, 3vw, 32px); box-shadow: 18px 18px 0 var(--paper-2), 0 30px 60px -36px rgba(55, 16, 17, .4); }
   .finding-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px 12px; margin-bottom: 18px; }
   .label { font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
@@ -392,18 +407,20 @@
       </ul>
     </div>
     <aside class="hero-card" aria-label="Illustrative example finding">
-      <article class="finding">
-        <div class="finding-top"><span class="label">Finding 01</span><span class="badge-outline">Illustrative example</span></div>
-        <p class="finding-title">Potential advertising of a prescription-only medicine on Instagram</p>
-        <div class="tags"><span class="sev high">High</span><span class="conf">Confidence: clear</span></div>
-        <dl>
-          <dt>Evidence</dt>
-          <dd class="q">“Book your Botox with Sarah today #botox” <span class="src">· Instagram, 2 Sept · E01</span></dd>
-          <dt>Authority</dt>
-          <dd><span class="auth">[LAW]</span> Human Medicines Regulations 2012, reg 284<br><span class="auth">[CAP RULE]</span> CAP Code 12.12</dd>
-          <dt>Next step</dt>
-          <dd>Consider reframing these posts around consultations, and have the revised approach reviewed by someone with current ASA/CAP expertise.</dd>
-        </dl>
+      <article class="rewrite">
+        <div class="rw-head"><span class="label">Finding 01 · Instagram</span><span class="ex">Illustrative example</span></div>
+        <div class="rw-block before">
+          <span class="label">As posted</span>
+          <p class="rw-quote">“Book your Botox with Sarah today #botox”</p>
+        </div>
+        <div class="rw-block after">
+          <span class="label">Consider instead</span>
+          <p class="rw-quote">“Thinking about lines and wrinkles? Book a consultation with Sarah to talk through your options.”</p>
+        </div>
+        <div class="rw-why">
+          <p><strong>Why:</strong> Botox is a prescription-only medicine. UK rules allow clinics to promote the consultation, not the medicine.</p>
+          <p class="src">[LAW] Human Medicines Regulations 2012, reg 284 · [CAP RULE] CAP Code 12.12 · Suggested wording for qualified review</p>
+        </div>
       </article>
       <p class="card-note">Invented clinic and post, shown for illustration. Findings are potential issues for qualified review, not legal advice.</p>
     </aside>
