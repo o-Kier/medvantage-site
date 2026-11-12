@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">  <!-- concept site: keep out of search results -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remit Practice Finance — Billing for gastroenterology groups</title>
+<meta name="description" content="Specialist billing and collections for private gastroenterology and endoscopy groups. 5% of what we collect, with a monthly statement on every pound.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.pexels.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FFFFFF;
+    --stone: #EEF0EF;
+    --ink: #111418;
+    --muted: #5C636B;
+    --faint: #9AA1A8;
+    --rule: #E3E6E8;
+    --blue: #2452F5;
+    --blue-deep: #1638B8;
+    --blue-soft: #DCE5FF;
+    --amber: #B7791F;
+    --serif: "Newsreader", Georgia, serif;
+    --sans: "Inter", system-ui, -apple-system, sans-serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    --ease: cubic-bezier(.2, .7, .1, 1);
+    --gutter: clamp(16px, 4vw, 48px);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  .wrap { width: min(1280px, 100% - var(--gutter) * 2); margin: 0 auto; }
+  .serif { font-family: var(--serif); font-weight: 300; letter-spacing: -.02em; }
+  .small { font-size: 13px; line-height: 1.5; color: var(--muted); }
+  .placeholder { color: var(--amber); border-bottom: 1px dashed var(--amber); }
+  :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 2px; }
+
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal[data-d="1"] { transition-delay: .1s; } .reveal[data-d="2"] { transition-delay: .2s; } .reveal[data-d="3"] { transition-delay: .3s; }
+
+  /* Brand mark: two leaves and two discs turning about the centre */
+  .mark { width: 26px; height: 26px; color: var(--ink); flex: none; }
+
+  /* ---------- Header ---------- */
+  .nav { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: box-shadow .3s; }
+  .nav.scrolled { box-shadow: 0 1px 0 var(--rule); }
+  .nav .wrap { display: flex; align-items: center; gap: 32px; height: 76px; }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 21px; letter-spacing: -.03em; margin-right: auto; }
+  .logo .mark { transition: transform .8s var(--ease); }
+  .logo:hover .mark { transform: rotate(90deg); }
+  .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--muted); }
+  .nav-links a:hover { color: var(--ink); }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; font: 500 14px/1 var(--sans); border: 1px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; transition: background .3s, color .3s, border-color .3s; }
+  .btn:hover { background: var(--ink); color: #fff; }
+  .btn-blue { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .btn-blue:hover { background: var(--blue-deep); border-color: var(--blue-deep); }
+  .btn .arrow { transition: transform .3s var(--ease); }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  /* ---------- Hero ---------- */
+  .hero { padding-top: clamp(40px, 6vw, 80px); }
+  .hero h1 { font-family: var(--serif); font-weight: 300; font-size: clamp(52px, 8.4vw, 124px); line-height: .98; letter-spacing: -.035em; }
+  .hero h1 .line { display: block; overflow: hidden; padding-bottom: .04em; }
+  .hero h1 .line span { display: inline-block; transform: translateY(105%); animation: rise 1.1s var(--ease) forwards; }
+  .hero h1 .line:nth-child(2) span { animation-delay: .1s; }
+  .hero h1 .line:nth-child(3) span { animation-delay: .2s; }
+  @keyframes rise { to { transform: none; } }
+  .hero-text { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: clamp(48px, 7vw, 96px); align-items: start; }
+  .hero-text .small { max-width: 300px; }
+  .hero-lede { font-size: clamp(19px, 1.7vw, 23px); line-height: 1.35; letter-spacing: -.01em; max-width: 470px; justify-self: end; }
+  .hero-lede strong { display: block; margin-top: 20px; font-weight: 600; font-size: 17px; }
+  .hero-lede .ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+
+  .photo { position: relative; overflow: hidden; background: #22272d; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.12); will-change: transform; filter: saturate(.75) contrast(1.02); }
+  .photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(20,40,90,.06), rgba(10,20,50,.35)); pointer-events: none; }
+  .hero-photo { margin-top: clamp(40px, 5vw, 64px); height: clamp(420px, 62vw, 760px); clip-path: inset(8% 6% 0 6%); transition: clip-path 1.4s var(--ease); }
+  .hero-photo.in { clip-path: inset(0 0 0 0); }
+  .hero-photo .big-mark { position: absolute; left: clamp(20px, 3vw, 40px); bottom: clamp(20px, 3vw, 40px); width: clamp(120px, 18vw, 230px); height: auto; aspect-ratio: 1; color: #fff; z-index: 2; animation: spinIn 1.8s var(--ease) .5s both; }
+  @keyframes spinIn { from { transform: rotate(-90deg) scale(.6); opacity: 0; } }
+  .hero-photo figcaption { position: absolute; right: clamp(20px, 3vw, 40px); bottom: clamp(20px, 3vw, 40px); z-index: 2; color: #fff; font-weight: 500; font-size: 13px; }
+
+  /* ---------- Process spread ---------- */
+  .spread { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 80px); padding: clamp(80px, 10vw, 140px) 0; }
+  .phase { padding-bottom: 36px; transition: opacity .5s; }
+  .phase h3 { font-family: var(--serif); font-weight: 300; font-size: clamp(34px, 3.6vw, 48px); letter-spacing: -.025em; line-height: 1.05; margin-bottom: 12px; display: flex; gap: 14px; align-items: baseline; }
+  .phase h3 small { font-family: var(--mono); font-size: 12px; color: var(--blue); letter-spacing: 0; }
+  .phase p { max-width: 400px; }
+  .phases .phase { opacity: .35; }
+  .phases .phase.active { opacity: 1; }
+  .after-phases { margin-top: 24px; font-size: clamp(19px, 1.6vw, 22px); line-height: 1.35; letter-spacing: -.01em; max-width: 470px; }
+  .after-phases strong { display: block; margin-top: 18px; font-weight: 600; font-size: 16px; }
+  .tall { position: sticky; top: 100px; height: min(78vh, 760px); align-self: start; }
+  .tall .over { position: absolute; inset: 0; z-index: 2; color: #fff; padding: clamp(20px, 2.4vw, 32px); display: flex; flex-direction: column; justify-content: space-between; }
+  .tall .over h4 { font-weight: 600; font-size: 17px; letter-spacing: -.01em; }
+  .tall .over p { font-size: 13px; opacity: .9; max-width: 300px; margin-top: 8px; }
+  .tall .stat { font-weight: 400; font-size: clamp(88px, 11vw, 168px); line-height: .85; letter-spacing: -.06em; text-align: right; white-space: nowrap; }
+  .tall .stat-cap { font-size: 12px; text-align: right; margin: 10px 0 0 auto; }
+  .tall .placeholder { color: #fff; border-color: #fff; }
+
+  /* ---------- Blue bar blocks ---------- */
+  .bars { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(12px, 1.6vw, 20px); align-items: end; height: clamp(360px, 40vw, 520px); }
+  .bar { background: var(--blue); color: #fff; height: var(--h); padding: clamp(18px, 2vw, 28px); display: flex; flex-direction: column; justify-content: flex-end; transform-origin: bottom; transform: scaleY(0); transition: transform 1.2s var(--ease); }
+  .bar:nth-child(2) { transition-delay: .12s; background: var(--blue-deep); }
+  .bar:nth-child(3) { transition-delay: .24s; }
+  .bars.in .bar { transform: scaleY(1); }
+  .bar > * { opacity: 0; transition: opacity .6s .9s; }
+  .bars.in .bar > * { opacity: 1; }
+  .bar > span { font-weight: 600; font-size: 13px; }
+  .bar b { font-weight: 400; font-size: clamp(56px, 7.4vw, 104px); line-height: 1; letter-spacing: -.055em; margin-top: 10px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .bars-cap { display: flex; justify-content: space-between; gap: 16px; margin-top: 14px; }
+
+  /* ---------- Section heads ---------- */
+  .sec { padding: clamp(80px, 10vw, 140px) 0; border-top: 1px solid var(--rule); }
+  .sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; margin-bottom: clamp(40px, 5vw, 64px); }
+  .sec-head h2 { font-family: var(--serif); font-weight: 300; font-size: clamp(40px, 5vw, 72px); line-height: 1; letter-spacing: -.03em; }
+  .sec-head p { font-size: 18px; line-height: 1.45; color: var(--muted); max-width: 440px; justify-self: end; }
+  .eyebrow { font-family: var(--mono); font-size: 12px; color: var(--blue); margin-bottom: 18px; display: block; }
+
+  /* ---------- Statement ---------- */
+  .statement { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--ink); }
+  .st-cell { padding: 24px 24px 28px 0; border-bottom: 1px solid var(--rule); }
+  .st-cell:not(:nth-child(3n+1)) { padding-left: 24px; border-left: 1px solid var(--rule); }
+  .st-cell span { display: block; font-weight: 500; font-size: 13px; }
+  .st-cell b { display: block; font-family: var(--serif); font-weight: 300; font-size: clamp(44px, 5vw, 68px); letter-spacing: -.035em; line-height: 1.05; margin-top: 14px; font-variant-numeric: tabular-nums lining-nums; }
+  .st-cell b.good { color: var(--blue); }
+  .st-cell b.warn { color: var(--amber); }
+  .st-foot { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding-top: 16px; }
+  .st-month { display: inline-flex; gap: 4px; }
+  .st-month button { font: 500 12px var(--sans); color: var(--muted); background: none; border: 1px solid var(--rule); padding: 6px 12px; cursor: pointer; transition: all .3s; }
+  .st-month button[aria-pressed="true"] { color: #fff; background: var(--ink); border-color: var(--ink); }
+  .tag { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--faint); }
+
+  /* ---------- Gastro ---------- */
+  .gastro { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(24px, 4vw, 64px); align-items: stretch; }
+  .gastro .photo { min-height: 460px; }
+  .codes { border-top: 1px solid var(--ink); }
+  .codes-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid var(--rule); font-weight: 500; font-size: 13px; }
+  .codes-head button { font: 500 12px var(--sans); background: none; border: 1px solid var(--rule); padding: 6px 12px; cursor: pointer; }
+  .codes-head button:hover { border-color: var(--ink); }
+  .row { display: grid; grid-template-columns: 1.2fr 1.3fr 90px; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--rule); position: relative; }
+  .row::after { content: ""; position: absolute; left: 0; bottom: -1px; height: 1px; width: 0; background: var(--blue); }
+  .row.scanning::after { animation: scan .6s linear forwards; }
+  @keyframes scan { to { width: 100%; } }
+  .row code { font-family: var(--mono); font-size: 13px; }
+  .row .note { color: var(--muted); font-size: 14px; opacity: 0; transition: opacity .4s; }
+  .row .pill { justify-self: end; font: 600 11px var(--sans); letter-spacing: .04em; text-transform: uppercase; padding: 5px 9px; color: var(--faint); background: var(--stone); transition: all .4s; }
+  .row.done .note { opacity: 1; }
+  .row.done .pill.ok { background: var(--blue); color: #fff; }
+  .row.done .pill.warn { background: #FBEBD2; color: var(--amber); }
+  .codes-cap { padding-top: 14px; }
+
+  /* ---------- Handle list ---------- */
+  .handle { list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--ink); }
+  .handle li { padding: 22px 20px 26px 0; border-bottom: 1px solid var(--rule); font-family: var(--serif); font-weight: 300; font-size: 22px; line-height: 1.2; letter-spacing: -.015em; transition: color .3s; }
+  .handle li:not(:nth-child(4n+1)) { padding-left: 20px; border-left: 1px solid var(--rule); }
+  .handle li small { display: block; font-family: var(--mono); font-size: 11px; color: var(--blue); margin-bottom: 18px; letter-spacing: 0; }
+  .handle li:hover { color: var(--blue); }
+
+  /* ---------- Calculator ---------- */
+  .calc { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(12px, 1.6vw, 20px); }
+  .calc-panel { background: var(--stone); padding: clamp(24px, 3vw, 44px); }
+  .field { margin-bottom: 36px; }
+  .field:last-child { margin-bottom: 0; }
+  .field-top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 16px; }
+  .field-top label { font-weight: 500; font-size: 13px; }
+  .field-top output { font-family: var(--serif); font-weight: 300; font-size: 34px; letter-spacing: -.03em; white-space: nowrap; font-variant-numeric: tabular-nums lining-nums; }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 2px; background: linear-gradient(90deg, var(--blue) var(--p, 50%), #C9CED2 var(--p, 50%)); outline: none; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; background: #fff; border: 2px solid var(--blue); cursor: grab; transition: transform .2s, background .2s; }
+  input[type=range]::-webkit-slider-thumb:hover { background: var(--blue); }
+  input[type=range]::-webkit-slider-thumb:active { transform: scale(1.2); cursor: grabbing; }
+  input[type=range]::-moz-range-thumb { width: 20px; height: 20px; border-radius: 50%; background: #fff; border: 2px solid var(--blue); cursor: grab; }
+  .calc-result { background: var(--blue); color: #fff; padding: clamp(24px, 3vw, 44px); display: flex; flex-direction: column; justify-content: space-between; gap: 32px; transition: background .5s; }
+  .calc-result.neg { background: var(--ink); }
+  .calc-result .k { font-weight: 600; font-size: 13px; }
+  .big-num { font-weight: 400; font-size: clamp(64px, 8vw, 116px); line-height: 1; letter-spacing: -.055em; margin-top: 14px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .breakdown { list-style: none; font-size: 14px; }
+  .breakdown li { display: flex; justify-content: space-between; gap: 16px; padding: 11px 0; border-top: 1px solid rgba(255,255,255,.25); }
+  .breakdown li b { font-weight: 500; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .calc-small { font-size: 12px; opacity: .8; margin-top: 16px; }
+  .calc-result .placeholder { color: #fff; border-color: #fff; }
+
+  /* ---------- Pricing ---------- */
+  .pricing { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: end; }
+  .price-big { font-weight: 400; font-size: clamp(160px, 24vw, 340px); line-height: .8; letter-spacing: -.07em; color: var(--blue); }
+  .terms { list-style: none; border-top: 1px solid var(--ink); }
+  .terms li { display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+  .terms span { color: var(--muted); }
+  .terms b { font-weight: 500; text-align: right; }
+
+  /* ---------- Trust ---------- */
+  .trust-wrap { display: grid; grid-template-columns: 5fr 7fr; gap: clamp(24px, 4vw, 64px); }
+  .trust-wrap .photo { min-height: 420px; }
+  .trust { display: grid; border-top: 1px solid var(--ink); align-content: start; }
+  .trust div { padding: 24px 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px; }
+  .trust h3 { font-family: var(--serif); font-weight: 300; font-size: 28px; letter-spacing: -.02em; line-height: 1.1; }
+  .trust p { color: var(--muted); }
+
+  /* ---------- FAQ ---------- */
+  .faq { border-top: 1px solid var(--ink); }
+  .faq details { border-bottom: 1px solid var(--rule); }
+  .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; gap: 20px; padding: 24px 0; font-family: var(--serif); font-weight: 300; font-size: clamp(22px, 2.2vw, 30px); letter-spacing: -.02em; transition: color .3s; }
+  .faq summary:hover { color: var(--blue); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; font-family: var(--sans); color: var(--blue); transition: transform .4s var(--ease); }
+  .faq details[open] summary::after { transform: rotate(45deg); }
+  .faq .ans { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s var(--ease); }
+  .faq details[open] .ans { grid-template-rows: 1fr; }
+  .faq .ans p { overflow: hidden; color: var(--muted); max-width: 640px; font-size: 16px; }
+  .faq details[open] .ans p { padding-bottom: 26px; }
+
+  /* ---------- Book ---------- */
+  .book { background: var(--ink); color: #fff; border-top: 0; }
+  .book .sec-head p { color: rgba(255,255,255,.7); }
+  .book .placeholder { color: #F2C67D; border-color: #F2C67D; }
+  form { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 32px; }
+  form label { display: grid; gap: 8px; font-weight: 500; font-size: 13px; color: rgba(255,255,255,.75); }
+  input:not([type=range]), select { font: 400 16px var(--sans); color: #fff; background: transparent; border: 0; border-bottom: 1px solid rgba(255,255,255,.3); border-radius: 0; padding: 12px 0; width: 100%; transition: border-color .3s; }
+  input:focus, select:focus { border-color: #fff; outline: none; }
+  select option { color: var(--ink); }
+  .full { grid-column: 1 / -1; }
+  .book .btn-blue { margin-top: 12px; }
+  .done { font-size: 15px; color: var(--blue-soft); }
+
+  footer { background: var(--ink); color: rgba(255,255,255,.55); border-top: 1px solid rgba(255,255,255,.12); }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; padding: 28px 0; font-size: 13px; }
+  footer .logo { color: #fff; font-size: 18px; margin: 0; }
+  footer .mark { color: #fff; width: 22px; height: 22px; }
+  footer .placeholder { color: #F2C67D; border-color: #F2C67D; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .hero-text, .spread, .sec-head, .gastro, .pricing, .trust-wrap { grid-template-columns: 1fr; }
+    .hero-lede, .sec-head p { justify-self: start; }
+    .tall { position: relative; top: 0; height: 540px; }
+    .statement { grid-template-columns: 1fr 1fr; }
+    .st-cell:not(:nth-child(3n+1)) { padding-left: 0; border-left: 0; }
+    .st-cell:nth-child(even) { padding-left: 18px; border-left: 1px solid var(--rule); }
+    .handle { grid-template-columns: 1fr 1fr; }
+    .handle li:not(:nth-child(4n+1)) { padding-left: 0; border-left: 0; }
+    .handle li:nth-child(even) { padding-left: 16px; border-left: 1px solid var(--rule); }
+    .calc { grid-template-columns: 1fr; }
+    .row { grid-template-columns: 1fr auto; }
+    .row .note { grid-column: 1 / -1; grid-row: 2; }
+    .trust div { grid-template-columns: 1fr; gap: 8px; }
+    form { grid-template-columns: 1fr; }
+    .bars { height: 380px; }
+  }
+  @media (max-width: 560px) {
+    .nav .btn { padding: 11px 14px; }
+    .bars { grid-template-columns: 1fr; height: auto; }
+    .bar { height: auto; min-height: 150px; }
+    .handle li { font-size: 18px; }
+    .st-cell b { font-size: 36px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    .reveal { opacity: 1; transform: none; }
+    .hero h1 .line span { transform: none; }
+    .hero-photo { clip-path: none; }
+    .bar { transform: none; } .bar > * { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="remit-mark" viewBox="0 0 100 100">
+    <path d="M52 48V6a42 42 0 0 1 42 42Z" fill="currentColor"/>
+    <path d="M48 52V94a42 42 0 0 1-42-42Z" fill="currentColor"/>
+    <circle cx="27" cy="27" r="21" fill="currentColor"/>
+    <circle cx="73" cy="73" r="21" fill="currentColor"/>
+  </symbol>
+</svg>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo"><svg class="mark" viewBox="0 0 100 100"><use href="#remit-mark"/></svg>Remit</a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#gastro">Gastroenterology</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">Questions</a>
+    </nav>
+    <a href="#book" class="btn">Book a review <span class="arrow">→</span></a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <h1>
+        <span class="line"><span>Every procedure</span></span>
+        <span class="line"><span>invoiced. Every</span></span>
+        <span class="line"><span>pound counted.</span></span>
+      </h1>
+      <div class="hero-text">
+        <p class="small reveal">Remit Practice Finance. Billing and collections for private gastroenterology and endoscopy groups, working inside your Healthcode account.</p>
+        <div class="hero-lede reveal" data-d="1">
+          We raise every invoice, chase every insurer and patient, and send you a clear statement of every pound you're owed.
+          <strong>You see patients. We make sure you're paid.</strong>
+          <div class="ctas">
+            <a href="#book" class="btn btn-blue">Book a receivables review <span class="arrow">→</span></a>
+            <a href="#how" class="btn">How it works</a>
+          </div>
+        </div>
+      </div>
+      <figure class="photo hero-photo" id="heroPhoto">
+        <img data-parallax src="https://images.pexels.com/photos/34852760/pexels-photo-34852760/free-photo-of-dramatic-view-of-the-shard-in-rainy-london.jpeg?auto=compress&cs=tinysrgb&w=2000" alt="The Shard rising above London rooftops on an overcast day">
+        <svg class="big-mark" viewBox="0 0 100 100" aria-hidden="true"><use href="#remit-mark"/></svg>
+        <figcaption>Billing for private practice, from London</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Process spread -->
+  <section id="how">
+    <div class="wrap spread">
+      <div>
+        <div class="phases">
+          <div class="phase" data-step="0"><h3>Receives <small>01</small></h3><p class="small">After each clinic or endoscopy list, we receive the patients seen and procedures done, from your secretary or straight from your practice system. That's your part done.</p></div>
+          <div class="phase" data-step="1"><h3>Checks <small>02</small></h3><p class="small">Every procedure is checked against each insurer's codes, fee schedule and pre-authorisation before anything goes out, so invoices are right the first time.</p></div>
+          <div class="phase" data-step="2"><h3>Collects <small>03</small></h3><p class="small">Insurer invoices go through Healthcode within 48 hours; self-pay and shortfall invoices go to patients with a card payment link. We chase queries, match every remittance and report monthly.</p></div>
+        </div>
+        <p class="after-phases reveal">You keep your secretary, your software and your Healthcode account. We work inside them, so nothing changes for patients except clearer bills.
+          <strong>No chasing, no guesswork.</strong></p>
+      </div>
+      <figure class="photo tall reveal">
+        <img data-parallax src="https://images.pexels.com/photos/16679950/pexels-photo-16679950/free-photo-of-doctor-in-operating-room.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="A clinician performing an endoscopic procedure beside a monitor">
+        <div class="over">
+          <div><h4>Real lists. Real money.</h4><p>Late invoices, unanswered queries and small balances nobody chases quietly drain private practices every year.</p></div>
+          <div><div class="stat">1 in 20</div><p class="stat-cap">pounds invoiced still unpaid after 90 days,<br>in our example practice</p></div>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Blue bars -->
+  <section>
+    <div class="wrap" style="padding-bottom:clamp(80px,10vw,140px)">
+      <div class="bars" id="bars">
+        <div class="bar" style="--h:62%"><span>Clinic list to submitted invoice</span><b><span class="count" data-to="48">0</span>h</b></div>
+        <div class="bar" style="--h:100%"><span>Fee, only on what we collect</span><b><span class="count" data-to="5">0</span>%</b></div>
+        <div class="bar" style="--h:44%"><span>Notice to leave, no lock-in</span><b><span class="count" data-to="30">0</span> days</b></div>
+      </div>
+      <div class="bars-cap small"><span>What we commit to, in writing.</span><span>No setup fee.</span></div>
+    </div>
+  </section>
+
+  <!-- Monthly statement -->
+  <section class="sec" id="monthly">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow reveal">Monthly statement</span><h2 class="reveal">Every pound, accounted for.</h2></div>
+        <p class="reveal" data-d="1">Each month you get one page: what was invoiced, what came in, how fast, and what's still owed and why.</p>
+      </div>
+      <div class="statement reveal" id="statement" aria-label="Example monthly statement">
+        <div class="st-cell"><span>Invoiced</span><b data-k="inv">£0</b></div>
+        <div class="st-cell"><span>Collected</span><b class="good" data-k="col">£0</b></div>
+        <div class="st-cell"><span>Days, clinic to invoice</span><b data-k="dti">0</b></div>
+        <div class="st-cell"><span>Average days to payment</span><b data-k="dtp">0</b></div>
+        <div class="st-cell"><span>Insurer queries resolved</span><b data-k="q">0</b></div>
+        <div class="st-cell"><span>Owed 90+ days</span><b class="warn" data-k="aged">£0</b></div>
+      </div>
+      <div class="st-foot">
+        <span class="st-month" role="group" aria-label="Month"><button aria-pressed="false" data-m="0">Aug</button><button aria-pressed="false" data-m="1">Sep</button><button aria-pressed="true" data-m="2">Oct</button></span>
+        <span class="tag">Illustrative example · gastroenterology group</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gastroenterology -->
+  <section class="sec" id="gastro">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow reveal">Built for gastroenterology</span><h2 class="reveal">One endoscopy list, many codes to get right.</h2></div>
+        <p class="reveal" data-d="1">Diagnostic and therapeutic procedures, biopsies and sedation each carry their own code and insurer fee. We know how they combine.</p>
+      </div>
+      <div class="gastro">
+        <figure class="photo reveal">
+          <img data-parallax src="https://images.pexels.com/photos/7578798/pexels-photo-7578798.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="A consultant reviewing documents with a patient">
+        </figure>
+        <div class="codes reveal" data-d="1" id="codes" aria-label="Example procedure checks">
+          <div class="codes-head"><span>Pre-submission checks · Thursday list</span><button type="button" id="rerun">Run again</button></div>
+          <div class="row"><code>OGD + biopsy</code><span class="note">Checked against insurer schedule</span><span class="pill ok">Ready</span></div>
+          <div class="row"><code>Colonoscopy + polypectomy</code><span class="note">Therapeutic code applied</span><span class="pill ok">Ready</span></div>
+          <div class="row"><code>Flexible sigmoidoscopy</code><span class="note">Pre-authorisation matched</span><span class="pill ok">Ready</span></div>
+          <div class="row"><code>Consultation</code><span class="note">Fee above insurer limit</span><span class="pill warn">Shortfall</span></div>
+          <div class="row"><code>Sedation</code><span class="note">Billed by the anaesthetist?</span><span class="pill warn">Check</span></div>
+          <p class="codes-cap small">Example of the checks run on each list before anything is submitted.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we handle -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow reveal">What we handle</span><h2 class="reveal">The whole job between treatment and payment.</h2></div>
+        <p class="reveal" data-d="1">Most practices lose money in the gaps: invoices sent late, queries left unanswered, small balances never chased. We close them.</p>
+      </div>
+      <ul class="handle reveal">
+        <li><small>01</small>Insurer e-billing through Healthcode</li>
+        <li><small>02</small>Self-pay invoices and card payment links</li>
+        <li><small>03</small>Shortfall invoices where your fees allow</li>
+        <li><small>04</small>Remittance matching and reconciliation</li>
+        <li><small>05</small>Insurer queries, rejections and resubmissions</li>
+        <li><small>06</small>Clean-up of old, unpaid invoices</li>
+        <li><small>07</small>Polite, named follow-up with patients</li>
+        <li><small>08</small>Medico-legal and embassy invoices</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="sec" id="calculator">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow reveal">Is it worth it?</span><h2 class="reveal">Run your own numbers.</h2></div>
+        <p class="reveal" data-d="1">Compare what billing costs you today with what Remit would cost, and what tighter chasing could bring back.</p>
+      </div>
+      <div class="calc">
+        <div class="calc-panel reveal">
+          <div class="field">
+            <div class="field-top"><label for="income">Private income invoiced a year</label><output id="incomeOut">£180,000</output></div>
+            <input type="range" id="income" min="50000" max="800000" step="5000" value="180000">
+          </div>
+          <div class="field">
+            <div class="field-top"><label for="lost">Written off or unpaid after 90 days</label><output id="lostOut">5%</output></div>
+            <input type="range" id="lost" min="0" max="15" step="0.5" value="5">
+          </div>
+          <div class="field">
+            <div class="field-top"><label for="cost">What billing costs you now, a month</label><output id="costOut">£1,200</output></div>
+            <input type="range" id="cost" min="0" max="4000" step="50" value="1200">
+          </div>
+        </div>
+        <div class="calc-result reveal" data-d="1" id="calcResult">
+          <div>
+            <p class="k" id="netLabel">Better off with Remit, a year</p>
+            <div class="big-num" id="net">£0</div>
+          </div>
+          <div>
+            <ul class="breakdown">
+              <li><span>Extra income recovered</span><b id="rRecovered">£0</b></li>
+              <li><span>Current billing cost you'd save</span><b id="rSaved">£0</b></li>
+              <li><span>Remit fee, 5% of collections</span><b id="rFee">£0</b></li>
+            </ul>
+            <p class="calc-small">Illustrative estimate, not a quote. Assumes we recover 60% of what's currently lost. Your receivables review gives you real figures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="sec" id="pricing">
+    <div class="wrap">
+      <div class="pricing">
+        <div>
+          <span class="eyebrow reveal">Pricing</span>
+          <div class="price-big reveal"><span class="count" data-to="5">0</span>%</div>
+          <h2 class="serif reveal" style="font-size:clamp(32px,3.6vw,52px);line-height:1.05;margin-top:24px">Of what we collect. Nothing else.</h2>
+          <p class="small reveal" style="margin-top:14px;max-width:360px;font-size:15px">No setup fee and no long contract. If we don't collect, we don't earn.</p>
+        </div>
+        <ul class="terms reveal" data-d="1">
+          <li><span>Setup fee</span><b>None</b></li>
+          <li><span>Notice to leave</span><b>30 days</b></li>
+          <li><span>Old unpaid invoices</span><b>Rate agreed upfront</b></li>
+          <li><span>Monthly statement</span><b>Included</b></li>
+          <li><span>Named account manager</span><b>Included</b></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow reveal">Your patients' data</span><h2 class="reveal">Handled like it's ours to protect.</h2></div>
+      </div>
+      <div class="trust-wrap">
+        <figure class="photo reveal">
+          <img data-parallax src="https://images.pexels.com/photos/17330512/pexels-photo-17330512/free-photo-of-barbican-centre-in-london.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Concrete towers of the Barbican in London under a cloudy sky">
+        </figure>
+        <div class="trust reveal" data-d="1">
+          <div><h3>A proper agreement</h3><p>A UK GDPR data processing agreement as standard, setting out exactly what we do with patient data, and registration with the ICO.</p></div>
+          <div><h3>Kept in the UK</h3><p>Billing records stored on UK servers, with access limited to the people working on your account.</p></div>
+          <div><h3>Security we can show</h3><p>Cyber Essentials certification in progress, with access logs and regular reviews.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow reveal">Questions</span><h2 class="reveal">What consultants ask us.</h2></div>
+      </div>
+      <div class="faq reveal">
+        <details><summary>Do I need to change my software or secretary?</summary><div class="ans"><p>No. We work with your existing Healthcode account and practice system. Many clients keep their secretary for bookings and letters, and hand us the billing.</p></div></details>
+        <details><summary>Will my patients know you're involved?</summary><div class="ans"><p>Yes, and that helps. Patients get clear bills from a named person on your behalf, with a phone number and a card payment link, so they're never surprised by an unexplained call.</p></div></details>
+        <details><summary>What happens when an insurer pays less than I invoiced?</summary><div class="ans"><p>We check whether it's an error or the agreed fee. Errors we challenge. Where your fee arrangements allow a shortfall, we invoice the patient clearly and politely.</p></div></details>
+        <details><summary>Can you take on my old unpaid invoices?</summary><div class="ans"><p>Yes. We review your aged debt first, tell you what's realistically recoverable, and agree a rate before we start.</p></div></details>
+        <details><summary>How do I leave if it isn't working?</summary><div class="ans"><p>Give us 30 days' notice. We hand back a full record of every invoice, payment and open query.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book -->
+  <section class="sec book" id="book">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><span class="eyebrow reveal" style="color:var(--blue-soft)">Receivables review</span><h2 class="reveal">Find out what you're owed.</h2></div>
+        <p class="reveal" data-d="1">Send us 12 months of invoices and remittances. Within a week we'll show you your aged debt, write-offs and days-to-cash, where money is being lost, and what we'd do about it. The review costs £750, credited against your first three months if you go ahead.</p>
+      </div>
+      <form id="review-form" class="reveal" novalidate>
+        <label for="f-name">Your name<input id="f-name" name="name" autocomplete="name"></label>
+        <label for="f-practice">Practice or group<input id="f-practice" name="practice"></label>
+        <label for="f-spec">Specialty
+          <select id="f-spec" name="specialty">
+            <option>Gastroenterology</option><option>Orthopaedics</option><option>Cardiology</option><option>Obstetrics and gynaecology</option><option>Other</option>
+          </select></label>
+        <label for="f-email">Email<input id="f-email" name="email" type="email" autocomplete="email"></label>
+        <div class="full"><button class="btn btn-blue" type="submit">Request my review <span class="arrow">→</span></button></div>
+        <p class="done full" id="f-done" hidden>Thanks. This is a concept site, so nothing was sent.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <a href="#top" class="logo"><svg class="mark" viewBox="0 0 100 100"><use href="#remit-mark"/></svg>Remit</a>
+  <span>Billing and collections for private consultants · Concept site by MedVantage. Remit is a fictional company.</span>
+  <span>Photography: Pexels</span>
+</div></footer>
+
+<script>
+(() => {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fmt = n => (n < 0 ? '−£' : '£') + Math.abs(Math.round(n)).toLocaleString('en-GB');
+  const $ = id => document.getElementById(id);
+
+  /* ---- Header shadow ---- */
+  addEventListener('scroll', () => $('nav').classList.toggle('scrolled', scrollY > 10), { passive: true });
+
+  /* ---- Photo parallax ---- */
+  const imgs = [...document.querySelectorAll('[data-parallax]')];
+  function parallax() {
+    const vh = innerHeight;
+    imgs.forEach(img => {
+      const r = img.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) return;
+      const k = (r.top + r.height / 2 - vh / 2) / vh;
+      img.style.transform = `scale(1.12) translateY(${k * -6}%)`;
+    });
+  }
+  if (!reduce) { addEventListener('scroll', parallax, { passive: true }); addEventListener('resize', parallax); parallax(); }
+
+  /* ---- Tweened numbers ---- */
+  function tween(el, to, { dur = 1400, dec = 0, money = false } = {}) {
+    const from = +(el.dataset.v || 0), start = performance.now();
+    el.dataset.v = to;
+    const out = v => money ? fmt(v) : v.toFixed(dec);
+    if (reduce) { el.textContent = out(to); return; }
+    const step = now => {
+      const k = Math.min(1, (now - start) / dur), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = out(from + (to - from) * e);
+      if (k < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  /* ---- Monthly statement (illustrative) ---- */
+  const months = [
+    { inv: 16240, col: 15310, dti: 2.1, dtp: 29, q: [5, 7], aged: 1180 },
+    { inv: 17580, col: 16890, dti: 1.8, dtp: 26, q: [6, 7], aged: 720 },
+    { inv: 18420, col: 17960, dti: 1.6, dtp: 24, q: [7, 8], aged: 460 },
+  ];
+  const cell = k => document.querySelector(`#statement [data-k="${k}"]`);
+  function showMonth(i) {
+    const m = months[i];
+    tween(cell('inv'), m.inv, { money: true });
+    tween(cell('col'), m.col, { money: true });
+    tween(cell('dti'), m.dti, { dec: 1 });
+    tween(cell('dtp'), m.dtp);
+    cell('q').textContent = `${m.q[0]} of ${m.q[1]}`;
+    tween(cell('aged'), m.aged, { money: true });
+    document.querySelectorAll('.st-month button').forEach(b => b.setAttribute('aria-pressed', +b.dataset.m === i));
+  }
+  let cycle, mIdx = 2;
+  document.querySelectorAll('.st-month button').forEach(b => b.addEventListener('click', () => { clearInterval(cycle); showMonth(+b.dataset.m); }));
+
+  /* ---- Gastro code checks ---- */
+  const rows = [...document.querySelectorAll('#codes .row')];
+  function runChecks() {
+    rows.forEach(r => r.classList.remove('done', 'scanning'));
+    rows.forEach((r, i) => {
+      setTimeout(() => r.classList.add('scanning'), i * 650);
+      setTimeout(() => r.classList.add('done'), i * 650 + 600);
+    });
+  }
+  $('rerun').addEventListener('click', runChecks);
+
+  /* ---- Reveal on scroll ---- */
+  const io = new IntersectionObserver(entries => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    el.classList.add('in');
+    el.querySelectorAll('.count').forEach(c => tween(c, +c.dataset.to, { dur: 1600 }));
+    if (el.id === 'statement') {
+      showMonth(2);
+      if (!reduce) cycle = setInterval(() => { mIdx = (mIdx + 1) % 3; showMonth(mIdx); }, 4200);
+    }
+    if (el.id === 'codes') runChecks();
+    io.unobserve(el);
+  }), { threshold: .2 });
+  document.querySelectorAll('.reveal, #bars, #heroPhoto').forEach(el => io.observe(el));
+
+  /* ---- Process phases light up as you scroll ---- */
+  const phases = document.querySelectorAll('.phase');
+  const so = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) phases.forEach(p => p.classList.toggle('active', p === e.target));
+  }), { rootMargin: '-40% 0px -45% 0px' });
+  phases.forEach(p => so.observe(p));
+  phases[0].classList.add('active');
+
+  /* ---- Calculator ---- */
+  const RECOVERY = 0.6, FEE = 0.05; // recovery rate is a placeholder assumption
+  let target = { net: 0, rec: 0, saved: 0, fee: 0 }, shown = { ...target };
+  function calc() {
+    const inc = +$('income').value, lost = +$('lost').value / 100, cost = +$('cost').value;
+    $('incomeOut').textContent = fmt(inc);
+    $('lostOut').textContent = (+$('lost').value).toFixed(1).replace('.0', '') + '%';
+    $('costOut').textContent = fmt(cost);
+    ['income', 'lost', 'cost'].forEach(id => { const el = $(id); el.style.setProperty('--p', ((el.value - el.min) / (el.max - el.min) * 100) + '%'); });
+    const rec = inc * lost * RECOVERY;
+    const fee = (inc * (1 - lost) + rec) * FEE, saved = cost * 12;
+    target = { rec, saved, fee, net: rec + saved - fee };
+    $('calcResult').classList.toggle('neg', target.net < 0);
+    $('netLabel').textContent = target.net < 0 ? 'Remit would cost you more, a year' : 'Better off with Remit, a year';
+  }
+  ['income', 'lost', 'cost'].forEach(id => $(id).addEventListener('input', calc));
+  calc();
+  (function anim() {
+    for (const k in target) shown[k] += (target[k] - shown[k]) * .14;
+    $('net').textContent = fmt(shown.net);
+    $('rRecovered').textContent = '+' + fmt(shown.rec);
+    $('rSaved').textContent = '+' + fmt(shown.saved);
+    $('rFee').textContent = '−' + fmt(shown.fee);
+    requestAnimationFrame(anim);
+  })();
+
+  /* ---- FAQ: one open at a time ---- */
+  const dets = document.querySelectorAll('.faq details');
+  dets.forEach(d => d.addEventListener('toggle', () => { if (d.open) dets.forEach(o => o !== d && (o.open = false)); }));
+
+  /* ---- Form (test site) ---- */
+  $('review-form').addEventListener('submit', e => { e.preventDefault(); $('f-done').hidden = false; });
+})();
+</script>
+</body>
+</html>
