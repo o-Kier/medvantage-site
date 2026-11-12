@@ -3,9 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>MedVantage | Marketing compliance reviews for UK aesthetics clinics</title>
-<meta name="description" content="A free, person-checked review of your clinic's website and Instagram against UK advertising rules. Plain-English findings and a clear next step.">
+<title>Website Design for Clinics &amp; Dentists, London | MedVantage</title>
+<meta name="description" content="Websites for aesthetics clinics, dentists and private doctors, written within healthcare advertising rules. A London studio. Get a free website review.">
 <meta name="theme-color" content="#F2EDE0">
+<link rel="canonical" href="https://medvantage.uk/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MedVantage">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Websites for private healthcare | MedVantage">
+<meta property="og:description" content="Websites for aesthetics clinics, dentists and private doctors. Designed, written and looked after by one London studio.">
+<meta property="og:url" content="https://medvantage.uk/">
+<meta property="og:image" content="https://medvantage.uk/assets/og/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "ProfessionalService", "@id": "https://medvantage.uk/#business", "name": "MedVantage", "url": "https://medvantage.uk/", "email": "hello@medvantage.uk", "description": "Website design, hosting and marketing for private healthcare: aesthetics clinics, dentists, dental labs and private doctors.", "logo": "https://medvantage.uk/MV_Logo_Dark.svg", "image": "https://medvantage.uk/assets/og/og-home.jpg", "address": {"@type": "PostalAddress", "addressLocality": "London", "addressCountry": "GB"}, "areaServed": {"@type": "Country", "name": "United Kingdom"}, "sameAs": ["https://www.instagram.com/_medvantage/"], "knowsAbout": ["Website design for aesthetics clinics", "Dental website design", "Websites for private doctors", "Healthcare advertising compliance"]}, {"@type": "WebSite", "@id": "https://medvantage.uk/#website", "url": "https://medvantage.uk/", "name": "MedVantage", "publisher": {"@id": "https://medvantage.uk/#business"}, "inLanguage": "en-GB"}]}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23371011'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23F2EDE0'%3EM%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -369,20 +381,154 @@
     .js .reveal { opacity: .001; transform: translateY(16px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
     .js .reveal.in { opacity: 1; transform: none; }
   }
+
+  /* ------------------------------------------------------------------
+     Agency additions: site mockups, work grid, services, audience.
+     ------------------------------------------------------------------ */
+  .hero-visual { position: relative; align-self: center; padding-bottom: 40px; }
+  .hero-visual .card-note { margin-top: 18px; max-width: 58%; }
+
+  /* Browser frame */
+  .browser {
+    background: var(--paper); border: 1px solid var(--rule-soft); border-radius: 10px;
+    overflow: hidden; box-shadow: 0 30px 60px -30px rgba(55,16,17,.35), 0 2px 6px rgba(26,26,26,.05);
+  }
+  .browser .chrome {
+    display: flex; align-items: center; gap: 6px; padding: 9px 12px;
+    background: var(--paper-2); border-bottom: 1px solid var(--rule-soft);
+  }
+  .browser .chrome i { width: 8px; height: 8px; border-radius: 50%; background: var(--rule-soft); }
+  .browser .chrome span {
+    margin-left: 10px; flex: 1; max-width: 220px; font-size: 10px; letter-spacing: .02em;
+    color: var(--ink-3); background: var(--paper); border-radius: 4px; padding: 2px 10px;
+  }
+
+  /* Mini website inside a frame. Theme via --bg, --fg, --ac, --mute. */
+  .mini { background: var(--bg); color: var(--fg); font-family: var(--sans); }
+  .mini .m-nav { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; }
+  .mini .m-logo { font-family: var(--serif); font-size: 17px; letter-spacing: .14em; text-transform: uppercase; }
+  .mini .m-links { display: flex; gap: 14px; font-size: 9.5px; color: var(--mute); }
+  .mini .m-links b { font-weight: 600; color: var(--bg); background: var(--ac); padding: 4px 10px; border-radius: 99px; }
+  .mini .m-hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 18px; padding: 22px 20px 26px; align-items: center; }
+  .mini .m-eyebrow { font-size: 8.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--ac); font-weight: 600; }
+  .mini .m-h { font-family: var(--serif); font-size: 30px; line-height: 1.02; margin: 8px 0 10px; font-weight: 400; }
+  .mini .m-h em { color: var(--ac); }
+  .mini .m-p { font-size: 10px; line-height: 1.5; color: var(--mute); max-width: 26ch; }
+  .mini .m-btns { display: flex; gap: 8px; margin-top: 14px; font-size: 9.5px; }
+  .mini .m-btns b { background: var(--ac); color: var(--bg); padding: 6px 12px; border-radius: 99px; font-weight: 600; }
+  .mini .m-btns b, .mini .m-btns u { white-space: nowrap; }
+  .mini .m-btns u { text-decoration: none; border-bottom: 1px solid currentColor; padding: 5px 0; }
+  .mini .m-img { aspect-ratio: 4/5; border-radius: 6px; background-size: cover; background-position: center; }
+  .mini .m-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; padding: 0 20px 22px; }
+  .mini .m-row div { border-top: 1px solid var(--line); padding-top: 8px; font-size: 9px; color: var(--mute); }
+  .mini .m-row strong { display: block; font-family: var(--serif); font-size: 14px; font-weight: 400; color: var(--fg); margin-bottom: 2px; }
+
+  /* Phone frame overlapping the browser */
+  .phone {
+    position: absolute; right: -18px; bottom: 0; width: 34%; min-width: 130px;
+    border: 6px solid var(--ink); border-radius: 22px; overflow: hidden; background: var(--ink);
+    box-shadow: 0 24px 50px -20px rgba(26,26,26,.5);
+  }
+  .phone .mini .m-nav { padding: 12px 12px 6px; }
+  .phone .mini .m-logo { font-size: 11px; }
+  .phone .mini .m-burger { width: 14px; height: 6px; border-top: 1.5px solid var(--fg); border-bottom: 1.5px solid var(--fg); }
+  .phone .mini .m-body { padding: 8px 12px 16px; }
+  .phone .mini .m-h { font-size: 21px; }
+  .phone .mini .m-img { aspect-ratio: 5/4; margin-top: 10px; }
+  .phone .mini .m-btns { margin-top: 10px; }
+
+  /* Themes for concept sites */
+  .t-aes   { --bg: #F6F0EA; --fg: #2B1A1C; --ac: #7A3B45; --mute: #6C5A58; --line: #DCCFC6; }
+  .t-dent  { --bg: #F3F6F5; --fg: #13262B; --ac: #1F5C63; --mute: #4F6266; --line: #CFDAD8; }
+  .t-gp    { --bg: #1E2622; --fg: #EEF0EA; --ac: #C9B98F; --mute: #AEB5AA; --line: #3A4540; }
+  .t-kiln  { --bg: #0C2F30; --fg: #F7EFE7; --ac: #D68F5C; --mute: #A9C4C0; --line: #1C5658; }
+  .t-remit { --bg: #FFFFFF; --fg: #111418; --ac: #2452F5; --mute: #5C636B; --line: #E3E6E8; }
+  .t-remit .m-logo { font-family: "Schibsted Grotesk", var(--sans); font-weight: 600; letter-spacing: -.02em; text-transform: none; }
+  .t-remit .m-h { font-weight: 300; }
+  .img-kiln  { background: url("assets/work/kiln/kiln-render.webp") center / auto 94% no-repeat, radial-gradient(ellipse 60% 70% at 50% 45%, #2f807c 0%, #1c5658 45%, #0c2f30 100%); }
+  .mini .m-img.img-kiln { background-size: auto 94%, cover; background-position: center, center; }
+  .img-remit { background: #2452F5; color: #fff; display: grid; place-items: center; }
+  .img-remit svg { width: 26%; height: auto; }
+  .live { position: relative; overflow: hidden; aspect-ratio: var(--w) / var(--h); background: var(--paper); }
+  .live iframe { position: absolute; top: 0; left: 0; width: calc(var(--w) * 1px); height: calc(var(--h) * 1px); border: 0; transform-origin: 0 0; transform: scale(var(--s, .3)); pointer-events: none; }
+  .soon { aspect-ratio: 1280 / 940; border: 1px dashed var(--rule-soft); border-radius: 10px; display: grid; place-content: center; text-align: center; gap: 8px; }
+  .soon__k { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--oxblood); font-weight: 600; }
+  .soon p { font-family: var(--serif); font-size: 24px; line-height: 1.1; color: var(--ink-3); }
+  .work-soon .meta h3 { color: var(--ink-3); }
+  .work-link { display: block; text-decoration: none; color: inherit; }
+  .work-link:hover .meta h3 { color: var(--oxblood); }
+  .work-link:focus-visible { outline-offset: 6px; }
+  .img-leaves { background-image: url("assets/mock-leaves.jpg"); }
+  .img-petal  { background-image: url("assets/mock-petal.jpg"); }
+  .img-tint-1 { background-image: linear-gradient(160deg, #DCE7E5, #9DBDBD 60%, #3E7178); }
+  .img-dental { background-image: url("https://images.pexels.com/photos/6812453/pexels-photo-6812453.jpeg?auto=compress&cs=tinysrgb&w=900"), linear-gradient(160deg, #DCE7E5, #9DBDBD 60%, #3E7178); }
+  .img-tint-2 { background-image: linear-gradient(200deg, #E9D9CF, #C7A49B 55%, #7A3B45); }
+
+  /* Work grid */
+  .work { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(18px, 2.4vw, 32px); margin-top: clamp(36px, 5vw, 60px); }
+  .work article .browser { transition: transform .5s var(--ease); }
+  .work article:hover .browser { transform: translateY(-4px); }
+  .work .mini .m-hero { grid-template-columns: 1fr; padding: 16px 16px 18px; }
+  .work .mini .m-img { aspect-ratio: 16/9; }
+  .work .mini .m-h { font-size: 22px; }
+  .work .mini .m-links span { display: none; }
+  .work .meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-top: 16px; }
+  .work .meta h3 { font-family: var(--serif); font-size: 24px; line-height: 1.1; }
+  .work .meta p { font-size: 13px; color: var(--ink-3); }
+  .work .tag { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--oxblood); font-weight: 600; white-space: nowrap; }
+  .work-note { margin-top: 22px; font-size: 13px; color: var(--ink-3); }
+
+  /* Audience band */
+  .who { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: clamp(36px, 5vw, 56px); }
+  .who > div { padding: 26px 26px 6px 0; }
+  .who > div + div { padding-left: 26px; border-left: 1px solid var(--rule-soft); }
+  .who h3 { font-family: var(--serif); font-size: clamp(24px, 2.4vw, 30px); line-height: 1.1; margin-bottom: 10px; }
+  .who p { color: var(--ink-2); font-size: 15px; }
+
+  .who-icon { width: 44px; height: 44px; margin-bottom: 16px; fill: none; stroke: var(--oxblood); stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* Form extras */
+  .field textarea {
+    width: 100%; min-height: 110px; resize: vertical; font: inherit; font-size: 16px; color: var(--ink);
+    background: #fff; border: 1px solid var(--rule-soft); border-radius: 0; padding: 12px 14px;
+    transition: border-color .2s, box-shadow .2s;
+  }
+  .field textarea:hover { border-color: #BDB09C; }
+  .field textarea:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(26,26,26,.08); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; border: 0; padding: 0; }
+  .chips legend { font-size: 14px; color: var(--ink); font-weight: 600; margin-bottom: 8px; padding: 0; }
+  .chips label { position: relative; cursor: pointer; }
+  .chips input { position: absolute; opacity: 0; inset: 0; cursor: pointer; }
+  .chips label span { display: inline-block; font-size: 14px; padding: 8px 14px; border: 1px solid var(--rule); border-radius: 99px; transition: background .2s, color .2s; }
+  .chips input:checked + span { background: var(--claret); color: var(--on-claret); border-color: var(--claret); }
+  .chips input:focus-visible + span { outline: 2px solid var(--oxblood); outline-offset: 3px; }
+  .form-block { margin-top: 26px; }
+
+  @media (max-width: 960px) {
+    .work { grid-template-columns: 1fr 1fr; }
+    .who { grid-template-columns: 1fr; }
+    .who > div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule-soft); }
+  }
+  @media (max-width: 640px) {
+    .work { grid-template-columns: 1fr; }
+    .phone { right: -6px; width: 38%; }
+    .mini .m-hero { grid-template-columns: 1fr 1fr; }
+    .mini .m-h { font-size: 22px; }
+    .mini .m-links span { display: none; }
+    .mini .m-btns u { display: none; }
+  }
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
-
 <header class="site-header">
   <div class="wrap">
     <div class="bar">
       <a class="logo" href="#top"><img src="MV_Logo_Dark.svg?v=3" width="272" height="31" alt="MedVantage"></a>
       <nav class="nav" id="site-nav" aria-label="Main">
-        <a href="#snapshot">The Snapshot</a>
-        <a href="#sample">See an example</a>
-        <a href="#pricing">Pricing</a>
-        <a class="pill" href="#request">Get your free Snapshot</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
+        <a href="#process">How it works</a>
+        <a class="pill" href="#request">Get a free website review</a>
       </nav>
       <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 6h14M2 12h14"/></svg></button>
     </div>
@@ -393,204 +539,147 @@
   <!-- HERO -->
   <section class="wrap hero" id="top" aria-labelledby="hero-title">
     <div class="hero-copy">
-      <p class="eyebrow">For UK aesthetics clinics</p>
-      <h1 class="display" id="hero-title">Grow your clinic, <em>safely.</em></h1>
-      <p class="intro">MedVantage checks your marketing against the advertising rules, keeps an eye on the clinics around you, and tells you <strong>the one thing to do next.</strong> Start with a free Compliance Snapshot of your website and Instagram.</p>
+      <p class="eyebrow">Websites for clinics, dentists &amp; private doctors</p>
+      <h1 class="display" id="hero-title">Look as good online as your <em>work.</em></h1>
+      <p class="intro">MedVantage designs and builds websites for aesthetics clinics, dentists and private doctors, then keeps them working, so <strong>the right patients find you and book.</strong></p>
       <div class="actions">
-        <a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a>
-        <a class="textlink" href="#sample">See an example finding</a>
+        <a class="pill solid lg" href="#request">Get a free website review <span class="arr" aria-hidden="true">→</span></a>
+        <a class="textlink" href="#work">See our work</a>
       </div>
       <ul class="trust">
-        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Every finding checked by a person</li>
-        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Usually within five working days</li>
-        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Private to you, no obligation</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Only private healthcare</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>Fixed price, agreed up front</li>
+        <li><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 8.5l3 3 7-7"/></svg>You own your site</li>
       </ul>
     </div>
-    <aside class="hero-card" aria-label="Illustrative example finding">
-      <article class="rewrite">
-        <div class="rw-head"><span class="label">Finding 01 · Instagram</span><span class="ex">Illustrative example</span></div>
-        <div class="rw-block before">
-          <span class="label">As posted</span>
-          <p class="rw-quote">“Book your Botox with Sarah today #botox”</p>
-        </div>
-        <div class="rw-block after">
-          <span class="label">Consider instead</span>
-          <p class="rw-quote">“Thinking about lines and wrinkles? Book a consultation with Sarah to talk through your options.”</p>
-        </div>
-        <div class="rw-why">
-          <p><strong>Why:</strong> Botox is a prescription-only medicine. UK rules allow clinics to promote the consultation, not the medicine.</p>
-          <p class="src">[LAW] Human Medicines Regulations 2012, reg 284 · [CAP RULE] CAP Code 12.12 · Suggested wording for qualified review</p>
-        </div>
-      </article>
-      <p class="card-note">Invented clinic and post, shown for illustration. Findings are potential issues for qualified review, not legal advice.</p>
+
+    <aside class="hero-visual" aria-label="Wren Dental, a concept website for a dental practice, shown on desktop and mobile">
+      <div class="browser">
+        <div class="chrome"><i></i><i></i><i></i><span>Wren Dental</span></div>
+        <div class="live" style="--w:1280;--h:860"><iframe src="wren/index.html" title="Wren Dental homepage, live preview" tabindex="-1" aria-hidden="true"></iframe></div>
+      </div>
+      <div class="phone" aria-hidden="true">
+        <div class="live" style="--w:390;--h:780"><iframe src="wren/index.html" title="Wren Dental on a phone, live preview" tabindex="-1" aria-hidden="true"></iframe></div>
+      </div>
     </aside>
   </section>
 
-  <!-- 1 · THREE QUESTIONS -->
-  <section class="wrap sec" id="questions" aria-labelledby="q-title">
+  <!-- 1 · WHO -->
+  <section class="wrap sec" id="who" aria-labelledby="who-title">
     <span class="num" aria-hidden="true">1</span>
     <div class="sec-rule reveal">
-      <h2 class="display" id="q-title">Three questions every clinic owner <em>asks.</em></h2>
-      <div class="body">
-        <p class="lead">Most clinic marketing agencies sell you more bookings. MedVantage answers the <em>questions underneath</em>: where you're exposed, where you're losing ground, and what to fix first.</p>
-        <div class="rows">
-          <div><h3><span class="n">01</span>Compliance</h3><p><strong>“Is my marketing compliant?”</strong> Your treatment pages, captions and offers, checked against the CAP Code and MHRA rules on prescription-only medicines, with anything that needs a closer look clearly flagged.</p></div>
-          <div><h3><span class="n">02</span>Competition</h3><p><strong>“Why is the clinic down the road winning?”</strong> What nearby clinics are changing: new treatments, pricing, review momentum and how they present themselves.</p></div>
-          <div><h3><span class="n">03</span>Priorities</h3><p><strong>“What should I do this month?”</strong> One clear priority, with the reasoning and evidence behind it. No dashboards to learn, no reports to decode.</p></div>
-        </div>
-        <p class="note"><em>The free Snapshot starts with the first question. The Signature Audit and MedVantage Watch answer all three.</em></p>
+      <div>
+        <p class="eyebrow">Specialists, not generalists</p>
+        <h2 class="display" id="who-title">We only work with <em>private healthcare.</em></h2>
       </div>
+      <div class="body">
+        <p class="lead">Patients choose a clinician on trust. We know how they decide, what reassures them, and the advertising rules your profession works within, so <em>your site is written within them from day one.</em></p>
+      </div>
+    </div>
+    <div class="who reveal">
+      <div><svg class="who-icon" viewBox="0 0 48 48" aria-hidden="true"><g transform="rotate(28 24 24)"><rect x="20" y="3" width="8" height="10" rx="4"/><rect x="18" y="13" width="12" height="3.5" rx="1"/><path d="M21 16.5V31l3 4.5 3-4.5V16.5"/><path d="M21 24h6"/></g><path d="M17.5 39.5c-1.6 2.3-1.6 4 0 4s1.6-1.7 0-4z"/></svg><h3>Aesthetics clinics</h3><p>Premium, natural-looking sites that lead with expertise and consultations, never discounts.</p></div>
+      <div><svg class="who-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M16 7c-5 0-8.5 4-8.5 9.5 0 5 2 8 3 13 1 6 2 12 5 12s3.2-7 4.2-11c.7-2.8 2-4 4.3-4s3.6 1.2 4.3 4c1 4 1.2 11 4.2 11s4-6 5-12c1-5 3-8 3-13C40.5 11 37 7 32 7c-3 0-5 2-8 2s-5-2-8-2z"/><path d="M14 13.5c1-1.6 2.6-2.3 4.4-2"/></svg><h3>Dentists &amp; dental labs</h3><p>Practices that need new private patients, and labs and technicians that need to win over dentists.</p></div>
+      <div><svg class="who-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h4M32 5h4"/><path d="M14 5v12a10 10 0 0 0 20 0V5"/><path d="M24 27v7a7 7 0 0 0 14 0v-4"/><circle cx="38" cy="26" r="4"/><circle cx="38" cy="26" r="1.2"/></svg><h3>Private doctors</h3><p>GPs, specialists and clinics where clarity, credibility and easy booking matter most.</p></div>
     </div>
   </section>
 
-  <!-- 2 · THE COMPLIANCE SNAPSHOT -->
-  <section class="wrap sec" id="snapshot" aria-labelledby="snap-title">
+  <!-- 2 · SERVICES -->
+  <section class="wrap sec" id="services" aria-labelledby="svc-title">
     <span class="num" aria-hidden="true">2</span>
     <div class="sec-rule reveal">
-      <div>
-        <p class="eyebrow">Free · 1–2 pages</p>
-        <h2 class="display" id="snap-title">The Compliance <em>Snapshot</em></h2>
-      </div>
+      <h2 class="display" id="svc-title">What we <em>do</em></h2>
       <div class="body">
-        <p class="lead">A short, specific review of your public marketing. It's built to be useful on its own, so you can act on it <em>whether or not we ever speak again.</em></p>
-        <div class="index">
-          <div><h3>Website and treatment pages</h3><p>How treatments are named, described and priced, and any claims likely to attract a complaint or the ASA's attention.</p></div>
-          <div><h3>Your last 30 Instagram posts</h3><p>Captions, hashtags, offers and imagery, including before-and-after content.</p></div>
-          <div><h3>Evidence for every point</h3><p>Each finding shows exactly where it appears, so your team can find and fix it quickly.</p></div>
-          <div><h3>A practical next step</h3><p>What to change first, in plain English rather than regulatory language.</p></div>
+        <p class="lead">One studio for your website and the marketing around it, so <em>nothing falls between agencies.</em></p>
+        <div class="rows">
+          <div><h3><span class="n">01</span>Website design &amp; build</h3><p><strong>A site that feels like your practice.</strong> Design, copywriting, photography direction and online booking, built to load fast and work beautifully on a phone, where most patients will find you.</p></div>
+          <div><h3><span class="n">02</span>Care &amp; hosting</h3><p><strong>Never think about your website again.</strong> Hosting, security, backups and the small changes every practice needs: new treatments, prices, team members and opening hours.</p></div>
+          <div><h3><span class="n">03</span>Growth</h3><p><strong>More of the right patients, month after month.</strong> We improve how you show up in local search and on your Google Business Profile, help you gather genuine reviews, track every enquiry back to where it came from and add fresh content. Each month you get one clear page on what's working and what we'll do next.</p></div>
         </div>
-        <p class="note"><strong>Why free?</strong> Because it's the fastest way to show you how we work. If it's useful, you'll know where to find us. If not, you've still got a clearer picture of your marketing.</p>
-        <div class="cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
+        <p class="note svc-note">There are no off-the-shelf packages. Every practice needs something different, so every project is quoted individually, and <strong>you'll have a fixed price before you commit to anything.</strong></p>
       </div>
     </div>
   </section>
 
-  <!-- SAMPLE SNAPSHOT -->
-  <section class="sample" id="sample" aria-labelledby="sample-title">
-    <div class="wrap">
-      <div class="sample-head reveal">
-        <div>
-          <p class="eyebrow">Illustrative example</p>
-          <h2 class="display" id="sample-title">What lands in <em>your inbox.</em></h2>
-        </div>
-        <p class="intro">One or two pages, readable in about five minutes. Every point shows where we found it, what it might engage, and one proportionate thing to consider.</p>
-      </div>
-      <div class="sample-grid reveal">
-        <div>
-          <ol class="keys">
-            <li><span class="k" aria-hidden="true">01</span><div><h3>Where to start</h3><p>The single change that reduces the most exposure, so you are never left with a list and no order.</p></div></li>
-            <li><span class="k" aria-hidden="true">02</span><div><h3>Severity and confidence</h3><p>How much a point matters, and how sure we are from public information alone.</p></div></li>
-            <li><span class="k" aria-hidden="true">03</span><div><h3>Evidence you can find</h3><p>The exact words, where they appear and when, with a dated screenshot in the appendix.</p></div></li>
-            <li><span class="k" aria-hidden="true">04</span><div><h3>Sources, clearly labelled</h3><p>Law, Code rule and ASA enforcement are kept apart, so you know what carries weight.</p></div></li>
-          </ol>
-          <div class="cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
-        </div>
-        <figure class="page">
-          <div class="sheet">
-            <div class="page-head"><img src="MV_Logo_Dark.svg?v=3" width="272" height="31" alt="MedVantage" loading="lazy"><span>Compliance Snapshot · Example Aesthetics · Reviewed 28 Sept 2026</span></div>
-            <p class="sig">Three areas warrant attention</p>
-            <ul class="sig-list">
-              <li><span class="sev high">High</span>Potential advertising of a prescription-only medicine on Instagram</li>
-              <li><span class="sev med">Medium</span>Results described as “guaranteed” on a treatment page</li>
-              <li><span class="sev low">Low</span>A “best in town” claim on the homepage</li>
-            </ul>
-            <div class="callouts">
-              <div><span class="k" aria-hidden="true">01</span><span class="label">Where to start</span><p>Review the four Instagram posts in Finding 01 with someone with current ASA/CAP expertise.</p></div>
-              <div><span class="label">What’s working</span><p>Treatment pages explain risks and recovery in clear, balanced language.</p></div>
-            </div>
-            <div class="page-finding">
-              <div class="finding-top"><span class="label">Finding 01</span><span class="tags"><span class="sev high">High</span><span class="conf">Confidence: clear</span><span class="k" aria-hidden="true">02</span></span></div>
-              <p class="finding-title">Potential advertising of a prescription-only medicine on Instagram</p>
-              <dl>
-                <dt>Signal</dt>
-                <dd class="q">Four of the 30 posts reviewed refer to Botox by name or hashtag; one includes a price.</dd>
-                <dt>Evidence<span class="k" aria-hidden="true">03</span></dt>
-                <dd class="q">“Book your Botox with Sarah today #botox” <span class="src">· Instagram, 2 Sept 2026 · E01</span></dd>
-                <dt>Why it matters</dt>
-                <dd>Botox is a prescription-only medicine, and UK law does not allow these to be advertised to the public. The ASA has said this includes a clinic’s own social posts and hashtags. What a clinic can promote is a consultation.</dd>
-                <dt>Authority<span class="k" aria-hidden="true">04</span></dt>
-                <dd><span class="auth">[LAW]</span> Human Medicines Regulations 2012, reg 284<br><span class="auth">[CAP RULE]</span> CAP Code 12.12<br><span class="auth">[ENFORCEMENT]</span> ASA Enforcement Notice on botulinum toxin, 9 Jan 2020</dd>
-                <dt>Consider</dt>
-                <dd>Editing the four posts and reframing around consultations. We’d recommend the revised approach is reviewed by someone with current ASA/CAP expertise.</dd>
-              </dl>
-            </div>
-            <p class="page-foot">Findings are potential issues for qualified review. They are not legal advice and do not determine whether a business is compliant.</p>
-          </div>
-          <figcaption>Illustrative example. The clinic, practitioner and posts are invented.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3 · HOW IT WORKS -->
-  <section class="wrap sec" id="process" aria-labelledby="proc-title">
+  <!-- 3 · WORK -->
+  <section class="wrap sec" id="work" aria-labelledby="work-title">
     <span class="num" aria-hidden="true">3</span>
+    <div class="sec-rule reveal">
+      <h2 class="display" id="work-title">Selected <em>work</em></h2>
+      <div class="body">
+        <p class="lead">Every practice is different, so every site is designed from scratch. Calm, credible and <em>designed to make booking the obvious next step.</em></p>
+      </div>
+    </div>
+    <div class="work reveal">
+      <article>
+        <a class="work-link" href="wren/index.html" target="_blank" rel="noopener">
+          <div class="browser">
+            <div class="chrome"><i></i><i></i><i></i><span>Wren Dental</span></div>
+            <div class="live" style="--w:1280;--h:800"><iframe src="wren/index.html" title="Wren Dental homepage" tabindex="-1" aria-hidden="true" loading="lazy"></iframe></div>
+          </div>
+          <div class="meta"><div><h3>Dental practice</h3><p>Wren · Website &amp; copywriting</p></div><span class="tag">Dental</span></div>
+        </a>
+      </article>
+      <article>
+        <a class="work-link" href="work-kiln.html">
+          <div class="browser">
+            <div class="chrome"><i></i><i></i><i></i><span>Kiln Dental Laboratory</span></div>
+            <div class="live" style="--w:1280;--h:800"><iframe src="kiln/index.html" title="Kiln Dental Laboratory homepage" tabindex="-1" aria-hidden="true" loading="lazy"></iframe></div>
+          </div>
+          <div class="meta"><div><h3>Dental laboratory</h3><p>Kiln · Website &amp; 3D render</p></div><span class="tag">Dental</span></div>
+        </a>
+      </article>
+      <article>
+        <a class="work-link" href="work-remit.html">
+          <div class="browser">
+            <div class="chrome"><i></i><i></i><i></i><span>Remit Practice Finance</span></div>
+            <div class="live" style="--w:1280;--h:800"><iframe src="remit/index.html" title="Remit Practice Finance homepage" tabindex="-1" aria-hidden="true" loading="lazy"></iframe></div>
+          </div>
+          <div class="meta"><div><h3>Medical billing</h3><p>Remit · Brand &amp; website</p></div><span class="tag">Medical</span></div>
+        </a>
+      </article>
+      <article>
+        <a class="work-link" href="work-vellum.html">
+          <div class="browser">
+            <div class="chrome"><i></i><i></i><i></i><span>Vellum Skin Clinic</span></div>
+            <div class="live" style="--w:1280;--h:800"><iframe src="vellum/index.html" title="Vellum Skin Clinic homepage" tabindex="-1" aria-hidden="true" loading="lazy"></iframe></div>
+          </div>
+          <div class="meta"><div><h3>Skin clinic</h3><p>Vellum · Website &amp; copywriting</p></div><span class="tag">Aesthetics</span></div>
+        </a>
+      </article>
+    </div>
+    <p class="work-note">Concept designs for invented practices. Client work will be added here as projects launch.</p>
+  </section>
+
+  <!-- 4 · HOW IT WORKS -->
+  <section class="wrap sec" id="process" aria-labelledby="proc-title">
+    <span class="num" aria-hidden="true">4</span>
     <div class="sec-rule reveal">
       <h2 class="display" id="proc-title">How it <em>works</em></h2>
       <div class="body">
-        <p class="lead">Nothing to install, no login. Software does the first read; <em>a person checks every finding</em> before it's sent.</p>
+        <p class="lead">A clear process and a single point of contact, <em>from first call to launch day.</em></p>
         <ol class="index">
-          <li><p class="step-n">01</p><h3>Request</h3><p>Share your clinic name, website and Instagram handle. It takes about a minute.</p></li>
-          <li><p class="step-n">02</p><h3>Review</h3><p>We scan your public marketing, then check each finding by hand and discard anything that doesn't hold up.</p></li>
-          <li><p class="step-n">03</p><h3>Receive</h3><p>Your Snapshot arrives by email as a short PDF, usually within five working days.</p></li>
-          <li><p class="step-n">04</p><h3>Talk it through</h3><p>If you'd like to go through it together, just ask for a 15-minute walkthrough. Entirely optional, with no obligation to buy anything.</p></li>
+          <li><p class="step-n">01</p><h3>Free review</h3><p>We look at your current website and how you show up on Google, and send you a short, honest note on what's holding you back.</p></li>
+          <li><p class="step-n">02</p><h3>Plan &amp; price</h3><p>A short call to understand your practice, then a fixed price and timeline. No hourly billing, no surprises.</p></li>
+          <li><p class="step-n">03</p><h3>Design &amp; build</h3><p>You see the design before anything is built, and give feedback at every stage. We write the copy, so you don't have to.</p></li>
+          <li><p class="step-n">04</p><h3>Launch &amp; grow</h3><p>We launch, connect your booking system and analytics, then look after the site and help it bring in patients.</p></li>
         </ol>
-        <div class="cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
+        <div class="cta"><a class="pill solid lg" href="#request">Get a free website review <span class="arr" aria-hidden="true">→</span></a></div>
       </div>
     </div>
   </section>
 
-  <!-- 4 · ABOUT -->
+  <!-- 5 · ABOUT -->
   <section class="wrap sec" id="about" aria-labelledby="about-title">
-    <span class="num" aria-hidden="true">4</span>
+    <span class="num" aria-hidden="true">5</span>
     <div class="sec-rule reveal">
       <div>
         <p class="eyebrow">Why MedVantage</p>
-        <h2 class="display" id="about-title">Clinics are judged on <em>trust.</em> Their marketing should earn it.</h2>
+        <h2 class="display" id="about-title">Patients judge you on <em>trust.</em> Your website should earn it.</h2>
       </div>
       <div class="body">
-        <p class="lead">MedVantage brings more than ten years' experience in marketing and communications, much of it in sectors where every claim is scrutinised. The job is always the same: help an organisation look as credible as it is, <em>without saying anything it can't stand behind.</em></p>
-        <p class="note">Aesthetics is professionalising fast, and the advertising rules are being enforced more closely than ever. <strong>The clinics that last will be the ones that look trustworthy, sound trustworthy and stay on the right side of the rules.</strong> MedVantage exists to help owners get there without guesswork.</p>
+        <p class="lead">MedVantage brings more than ten years' experience in design, marketing and communications. The job is always the same: help a practice <em>look as credible as it is.</em></p>
+        <p class="note">Most practices are let down online by a dated site, slow pages or a booking journey that loses people halfway. <strong>We fix that properly, then stay on hand so it keeps working.</strong> Based in London, working with practices across the UK.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- 5 · PRICING -->
-  <section class="wrap sec" id="pricing" aria-labelledby="price-title">
-    <span class="num" aria-hidden="true">5</span>
-    <div class="sec-rule reveal">
-      <h2 class="display" id="price-title">After the <em>Snapshot</em></h2>
-      <div class="body">
-        <p class="lead">For clinics that want the full picture, and for those that want <em>someone keeping watch</em> each month.</p>
-      </div>
-    </div>
-    <div class="plans reveal">
-      <article class="plan">
-        <span class="eyebrow">Start here</span>
-        <h3 class="name">Compliance Snapshot</h3>
-        <p class="price">Free</p>
-        <p class="desc">Your public marketing, reviewed and prioritised.</p>
-        <ul><li>Website and treatment pages</li><li>Last 30 Instagram posts</li><li>Evidence and a next step</li></ul>
-        <a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a>
-      </article>
-      <article class="plan">
-        <span class="eyebrow">One-off</span>
-        <h3 class="name">Signature Audit</h3>
-        <p class="price">£750</p>
-        <p class="plan-note">Founding price for our first ten clinics. £1,500 after that.</p>
-        <p class="desc">Where your clinic is exposed, where it's missing opportunities, and what to prioritise.</p>
-        <ul><li>Brand, website and social content</li><li>Local competitors and reviews</li><li>Compliance and pricing signals</li><li>A 30/60/90-day action plan</li></ul>
-        <a class="pill lg" href="mailto:hello@medvantage.uk?subject=Signature%20Audit">Ask about the Audit</a>
-      </article>
-      <article class="plan">
-        <span class="eyebrow">Monthly</span>
-        <h3 class="name">MedVantage Watch</h3>
-        <p class="price">£195<small> / month</small></p>
-        <p class="plan-note">Three-month minimum.</p>
-        <p class="desc">One page a month: what you need to know, and what to do about it.</p>
-        <ul><li>Flags on your new content</li><li>Changes at three nearby clinics</li><li>Review trends</li><li>One priority action</li></ul>
-        <a class="pill lg" href="mailto:hello@medvantage.uk?subject=MedVantage%20Watch">Ask about Watch</a>
-      </article>
     </div>
   </section>
 
@@ -601,10 +690,12 @@
       <h2 class="display" id="faq-title">Common <em>questions</em></h2>
       <div class="body">
         <div class="rows" style="margin-top:0 !important">
-          <div><h3>Is this legal advice?</h3><p>No. The Snapshot flags potential issues for qualified review. It doesn't determine whether your clinic is compliant.</p></div>
-          <div><h3>Who sees my results?</h3><p>Only you. We never publish or share findings about a clinic.</p></div>
-          <div><h3>Do I have to buy anything?</h3><p>No. The Snapshot is yours to keep and act on, whether or not we speak again.</p></div>
-          <div><h3>What happens to my details?</h3><p>We use them to prepare and send your Snapshot, and to follow up once. That's it. <a class="linklike" href="privacy.html">Read our privacy policy</a></p></div>
+          <div><h3>How much does a website cost?</h3><p>It depends on what your practice needs: the number of pages and treatments, booking integration, copywriting and photography. After your free review we send a fixed quote, so you know the full cost before anything starts.</p></div>
+          <div><h3>How long does a new website take?</h3><p>Most sites take three to six weeks from our first call, depending on size and how quickly feedback comes back. We'll give you a date before we start.</p></div>
+          <div><h3>Do I own my website?</h3><p>Yes. The site, the content and the domain are yours, whether or not you stay on a care plan.</p></div>
+          <div><h3>Can you work with my booking system?</h3><p>Usually, yes. We connect the booking and practice management tools clinics already use, so patients can book in a couple of taps.</p></div>
+          <div><h3>Do you write the content?</h3><p>Yes. We write it with you, in plain English, and within the advertising rules for your profession.</p></div>
+          <div><h3>What happens to my details?</h3><p>We use them to prepare your review and reply to your enquiry. That's it. <a class="linklike" href="privacy.html">Read our privacy policy</a></p></div>
         </div>
       </div>
     </div>
@@ -616,47 +707,60 @@
     <div class="sec-rule reveal">
       <div class="body">
         <p class="eyebrow" style="color:var(--oxblood)">Free · No obligation</p>
-        <h2 class="display" id="req-title" style="margin-top:14px">Request your <em>Compliance Snapshot</em></h2>
-        <p class="lead">We're currently reviewing clinics in England and Wales, <em>in the order requests arrive.</em></p>
+        <h2 class="display" id="req-title" style="margin-top:14px">Get a free <em>website review</em></h2>
+        <p class="lead">Tell us a little about your practice. We'll review your site and Google presence and <em>reply within two working days.</em></p>
       </div>
 
       <div>
-        <form id="snapshot-form" novalidate>
+        <form id="enquiry-form" novalidate>
           <div class="row">
             <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
             <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
           </div>
           <div class="row">
-            <div class="field"><label for="f-clinic">Clinic name</label><input id="f-clinic" name="clinic" type="text" autocomplete="organization" required></div>
+            <div class="field"><label for="f-practice">Practice name</label><input id="f-practice" name="practice" type="text" autocomplete="organization" required></div>
             <div class="field">
-              <label for="f-size">Practitioners</label>
-              <select id="f-size" name="practitioners" required>
+              <label for="f-type">Type of practice</label>
+              <select id="f-type" name="practice_type" required>
                 <option value="">Select</option>
-                <option>Just me</option>
-                <option>2–4</option>
-                <option>5–8</option>
-                <option>9 or more</option>
+                <option>Aesthetics clinic</option>
+                <option>Dental practice</option>
+                <option>Dental lab or technician</option>
+                <option>Private doctor or clinic</option>
+                <option>Other healthcare</option>
               </select>
             </div>
           </div>
           <div class="row">
-            <div class="field"><label for="f-site">Website</label><input id="f-site" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourclinic.co.uk" required></div>
-            <div class="field"><label for="f-ig">Instagram <span class="opt">(optional)</span></label><input id="f-ig" name="instagram" type="text" placeholder="@yourclinic"></div>
+            <div class="field"><label for="f-site">Current website <span class="opt">(if you have one)</span></label><input id="f-site" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourpractice.co.uk"></div>
+            <div class="field">
+              <label for="f-when">When are you looking to start?</label>
+              <select id="f-when" name="timing">
+                <option value="">Select</option>
+                <option>As soon as possible</option>
+                <option>In the next 3 months</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
           </div>
-          <div class="check">
-            <input id="f-consent" name="consent" type="checkbox" required>
-            <span><label for="f-consent">I understand the Snapshot flags potential issues for qualified review and isn't legal advice.</label> <button class="linklike" type="button" data-open-terms>Read the terms</button></span>
-          </div>
+          <fieldset class="chips form-block">
+            <legend>What do you need? <span class="opt">(choose any)</span></legend>
+            <label><input type="checkbox" name="needs" value="New website"><span>New website</span></label>
+            <label><input type="checkbox" name="needs" value="Redesign"><span>Redesign</span></label>
+            <label><input type="checkbox" name="needs" value="Ongoing marketing"><span>Ongoing marketing</span></label>
+            <label><input type="checkbox" name="needs" value="Not sure yet"><span>Not sure yet</span></label>
+          </fieldset>
+          <div class="field form-block"><label for="f-msg">Anything else? <span class="opt">(optional)</span></label><textarea id="f-msg" name="message"></textarea></div>
           <div class="sr" aria-hidden="true"><label for="f-hp">Leave this empty</label><input id="f-hp" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
           <p class="err" id="f-error" role="alert" hidden></p>
-          <button class="pill solid lg" type="submit" id="f-submit">Request my Snapshot <span class="arr" aria-hidden="true">→</span></button>
-          <p class="form-note">Usually delivered within five working days.</p>
+          <button class="pill solid lg" type="submit" id="f-submit">Request my free review <span class="arr" aria-hidden="true">→</span></button>
+          <p class="form-note">We'll only use your details to reply. <a class="linklike" href="privacy.html">Privacy policy</a></p>
         </form>
 
         <div class="thanks" id="f-thanks" hidden tabindex="-1">
           <p class="eyebrow" style="color:var(--oxblood)">Request received</p>
           <h3>Thank <em>you.</em></h3>
-          <p>Your Snapshot will arrive from <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a>. It's worth adding us to your contacts so it doesn't land in spam.</p>
+          <p>We'll be in touch from <a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a> within two working days. It's worth adding us to your contacts so it doesn't land in spam.</p>
         </div>
       </div>
     </div>
@@ -669,14 +773,12 @@
     <p class="line"><span>medvantage.uk</span><span>London</span><span><a href="mailto:hello@medvantage.uk">hello@medvantage.uk</a></span></p>
     <div class="social"><a href="https://www.instagram.com/_medvantage/" target="_blank" rel="noopener" aria-label="MedVantage on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a></div>
     <div class="foot-row">
-      <span class="l">Serving clinics in England and Wales</span>
+      <span class="l">Websites &amp; marketing for private healthcare</span>
       <nav class="foot-links" aria-label="Footer">
-        <a href="#snapshot">The Snapshot</a>
-        <a href="#sample">Example</a>
+        <a href="#services">Services</a>
+        <a href="#work">Work</a>
         <a href="#process">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#about">About</a>
-        <button type="button" data-open-terms>Terms</button>
+                <a href="#about">About</a>
         <a href="privacy.html">Privacy</a>
       </nav>
       <span class="r">© 2026 MedVantage</span>
@@ -684,29 +786,7 @@
   </div>
 </footer>
 
-<div class="sticky-cta" id="sticky-cta"><a class="pill solid lg" href="#request">Request your free Snapshot <span class="arr" aria-hidden="true">→</span></a></div>
-
-<!-- Terms & disclaimer -->
-<dialog class="terms" id="terms" aria-labelledby="terms-title">
-  <div class="inner">
-    <div class="top">
-      <h2 id="terms-title">Terms &amp; <em>disclaimer</em></h2>
-      <button class="close" type="button" data-close-terms aria-label="Close terms">✕</button>
-    </div>
-    <div>
-      <h3>About our findings</h3>
-      <p>MedVantage provides marketing and brand guidance for aesthetics businesses. Snapshot and audit findings identify potential issues for qualified review. They are not legal or regulatory advice and do not determine whether a business is compliant. Please seek qualified advice before acting on any compliance matter.</p>
-    </div>
-    <div>
-      <h3>Founding prices</h3>
-      <p>The Signature Audit founding price of £750 applies to our first ten clinics; the list price is £1,500. MedVantage Watch is £195 a month with a three-month minimum.</p>
-    </div>
-    <div>
-      <h3>Your details</h3>
-      <p>We use the details you submit only to prepare and send your Snapshot, and to follow up once about it. Our <a href="privacy.html">privacy policy</a> explains what we collect, who handles it and your rights.</p>
-    </div>
-  </div>
-</dialog>
+<div class="sticky-cta" id="sticky-cta"><a class="pill solid lg" href="#request">Get a free website review <span class="arr" aria-hidden="true">→</span></a></div>
 
 <div class="cursor-dot" aria-hidden="true"><i></i></div>
 
@@ -737,15 +817,6 @@
   nav.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
   addEventListener("keydown", e => { if (e.key === "Escape" && nav.classList.contains("open")) { setMenu(false); menuBtn.focus(); } });
 
-  // Terms dialog
-  const terms = document.getElementById("terms");
-  document.querySelectorAll("[data-open-terms]").forEach(b => b.addEventListener("click", () => {
-    terms.showModal();
-    terms.scrollTop = 0;
-  }));
-  terms.querySelector("[data-close-terms]").addEventListener("click", () => terms.close());
-  terms.addEventListener("click", e => { if (e.target === terms) terms.close(); });
-
   // Custom cursor: a single point that tracks the pointer exactly
   if (matchMedia("(pointer: fine)").matches && !reduceMotion) {
     root.classList.add("has-cursor");
@@ -755,7 +826,7 @@
       root.classList.add("cursor-on");
       const t = e.target;
       root.classList.toggle("cursor-hover", !!t.closest("a, button, label, select, input[type=checkbox]"));
-      root.classList.toggle("cursor-field", !!t.closest("input[type=text], input[type=email]"));
+      root.classList.toggle("cursor-field", !!t.closest("input[type=text], input[type=email], textarea"));
       root.classList.toggle("cursor-dark", !!t.closest(".claret, .pill.solid, .sev.high"));
     }, { passive: true });
     document.addEventListener("pointerleave", () => root.classList.remove("cursor-on"));
@@ -774,8 +845,8 @@
     [document.querySelector(".hero .actions"), document.getElementById("request")].forEach(el => so.observe(el));
   }
 
-  // Snapshot form
-  const form = document.getElementById("snapshot-form");
+  // Enquiry form
+  const form = document.getElementById("enquiry-form");
   const errorEl = document.getElementById("f-error");
   const thanks = document.getElementById("f-thanks");
   const submit = document.getElementById("f-submit");
@@ -789,9 +860,7 @@
     const email = form.querySelector("#f-email");
     if (missing.length) {
       const first = missing[0];
-      errorEl.textContent = first.type === "checkbox"
-        ? "Please tick the box to confirm you've read how the Snapshot works."
-        : "Please fill in the highlighted fields so we can prepare your Snapshot.";
+      errorEl.textContent = "Please fill in the highlighted fields so we can get back to you.";
       missing.forEach(el => el.setAttribute("aria-invalid", "true"));
       errorEl.hidden = false; first.focus(); return;
     }
@@ -800,11 +869,12 @@
       errorEl.textContent = "That email address looks incomplete. Please check it and try again.";
       errorEl.hidden = false; email.focus(); return;
     }
-    const data = Object.fromEntries(new FormData(form).entries());
+    const fd = new FormData(form);
+    const data = Object.fromEntries(fd.entries());
+    data.needs = fd.getAll("needs").join(", ") || "Not specified";
     if (form.querySelector("#f-hp").value) { form.hidden = true; thanks.hidden = false; return; } // bot trap
     delete data._honey;
-    data.consent = "Yes";
-    data._subject = `Snapshot request: ${data.clinic}`;
+    data._subject = `Website enquiry: ${data.practice}`;
     data._replyto = data.email;
     data._template = "table";
     data._captcha = "false";
@@ -824,6 +894,13 @@
   });
   form.addEventListener("input", e => e.target.removeAttribute("aria-invalid"));
   form.addEventListener("change", e => e.target.removeAttribute("aria-invalid"));
+  // Work cards: scale each live site preview to fit its frame
+  (() => {
+    const fit = el => el.style.setProperty("--s", el.clientWidth / +el.style.getPropertyValue("--w"));
+    const lives = document.querySelectorAll(".live");
+    if ("ResizeObserver" in window) { const ro = new ResizeObserver(es => es.forEach(e => fit(e.target))); lives.forEach(el => ro.observe(el)); }
+    else lives.forEach(fit);
+  })();
 </script>
 </body>
 </html>
