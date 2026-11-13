@@ -59,4 +59,17 @@
       done.hidden = false;
     });
   }
+  /* Live previews: open at a section (?view=id) by scrolling this frame only.
+     A #hash link would also scroll the page the preview sits in. */
+  (function () {
+    var m = /[?&]view=([a-z-]+)/.exec(location.search);
+    if (!m) return;
+    function go() {
+      var el = document.getElementById(m[1]); if (!el) return;
+      var head = document.querySelector('header');
+      var off = head ? head.offsetHeight : 0;
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - off, behavior: 'instant' });
+    }
+    go(); window.addEventListener('load', go);
+  })();
 })();
