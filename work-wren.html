@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5Q5E5DY59"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D5Q5E5DY59');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Wren, a dental practice website concept | MedVantage</title>
@@ -574,6 +582,9 @@
   .cs-ledger dd { margin: 0; color: var(--ink-2); }
   .cs-small { margin-top: 20px; font-size: 13px; color: var(--ink-3); max-width: 70ch; }
   @media (max-width: 860px) { .cs-ledger { grid-template-columns: 1fr; } .cs-ledger div { grid-template-columns: 1fr; gap: 6px; } }
+
+  /* Sans sub-headings (Schibsted Grotesk) set in capitals */
+  .rows h3, .index h3, .keys h3, .terms h3, .content h3 { text-transform: uppercase; letter-spacing: .06em; font-size: 15px; }
 </style>
 </head>
 <body>

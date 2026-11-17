@@ -1,6 +1,14 @@
 <!doctype html>
 <html lang="en-GB">
 <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D5Q5E5DY59"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-D5Q5E5DY59');
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Website Design for Clinics &amp; Dentists, London | MedVantage</title>
@@ -477,6 +485,7 @@
   .work .meta p { font-size: 13px; color: var(--ink-3); }
   .work .tag { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--oxblood); font-weight: 600; white-space: nowrap; }
   .work-note { margin-top: 22px; font-size: 13px; color: var(--ink-3); }
+  .work .feature { grid-column: 1 / -1; }
 
   /* Audience band */
   .who { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: clamp(36px, 5vw, 56px); }
@@ -517,6 +526,9 @@
     .mini .m-links span { display: none; }
     .mini .m-btns u { display: none; }
   }
+
+  /* Sans sub-headings (Schibsted Grotesk) set in capitals */
+  .rows h3, .index h3, .keys h3, .terms h3, .content h3 { text-transform: uppercase; letter-spacing: .06em; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -610,6 +622,15 @@
       </div>
     </div>
     <div class="work reveal">
+      <article class="feature">
+        <a class="work-link" href="work-sethi.html">
+          <div class="browser">
+            <div class="chrome"><i></i><i></i><i></i><span>Sethi · Consultant Plastic Surgeon</span></div>
+            <div class="live" style="--w:1440;--h:760"><iframe src="sethi/index.html" title="Sethi plastic surgeon homepage" tabindex="-1" aria-hidden="true" loading="lazy"></iframe></div>
+          </div>
+          <div class="meta"><div><h3>Plastic surgeon</h3><p>Sethi · Website &amp; copywriting</p></div><span class="tag">Surgical</span></div>
+        </a>
+      </article>
       <article>
         <a class="work-link" href="work-wren.html">
           <div class="browser">
